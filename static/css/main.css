@@ -7,23 +7,57 @@
     width: 100%;
 } 
 
-/*nav*/
+/*nav FOR HOMEPAGE*/
 
-.nav-logo {
-    font-size: 2em;
+.nav-natura-hp {
+    background-image: url('../../static/img/Natura-logo.png');
+    width: 8em;
+    height: 8em;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
 }
 
-.nav-cart {
-    font-size: 3em;
+.nav-link-hp {
+    font-size: 1.1em;
+    padding-left: 45px !important;
+    padding-right: 45px !important;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
     color: #000;
-    float: right;
-    position: absolute;
-    margin-left: 0em;
-    
 }
 
-.nav-cart:hover {
-    color: #FCC023;
+.nav-link-hp:hover {
+    color: #000
+}
+
+.nav-link-hp:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FCC023;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-link-hp:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*NAV*/
+
+.navbar-base {
+    background-color: grey;
 }
 
 .nav-natura {
@@ -75,7 +109,7 @@
 
 .footer {
     font-size: 0.75em;
-    background-color: #000;
+    background-color: #1F1F1F;
     color: #ffff;
 }
 
