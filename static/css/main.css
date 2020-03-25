@@ -1,0 +1,26 @@
+/*HOMEPAGE*/
+
+.homepage {
+    background-image: url('../../static/img/homepage-ocean-bg-close-lg.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+} 
+
+/*nav*/
+
+.nav-link {
+    font-size: 1.5em;
+    padding-left: 20px !important;
+    color: #000;
+}
+
+.nav-logo {
+    font-size: 2em;
+}
+
+.nav-cart {
+    font-size: 2.5em;
+    color: #000;
+    float: right;
+}
