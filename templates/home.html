@@ -14,32 +14,27 @@ Home
         <div class="collapse navbar-collapse justify-content-center row" id="navbarNav">
             <ul class="navbar-nav col-md-5 row">
                 <li class="nav-item active col-md-6">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{%url 'home'%}">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item col-md-6">
-                    <a class="nav-link" href="#">Products</a>
+                <li class="nav-item col-6">
+                    <a class="nav-link" href="{%url 'products'%}">Products</a>
                 </li>
             </ul>
-                <a class="nav-natura col-md-2"></a>
+                <a class="nav-natura col-md-2" href="{%url 'home'%}"></a>
             <ul class="navbar-nav col-md-5 row">
-                <li class="nav-item col-md-6">
-                    <a class="nav-link" href="#">Our story</a>
+                <li class="nav-item col-6">
+                    <a class="nav-link" href="{%url 'our_story'%}">Our story</a>
                 </li>
-                <li class="nav-item col-md-6">
-                    <a class="nav-link" href="#">Contact us</a>
+                <li class="nav-item col-6">
+                    <a class="nav-link" href="{%url 'contact_us'%}">Contact us</a>
                 </li>
             </ul>
         </div>
     </nav>
+
+    <div class="homepage-featured">
+        Featured box
+    </div>  
 </div>
-<footer>
-    <div class="row">
-        <div class="col-md-6">
-            news
-        </div>
-        <div class="col-md-6">
-            social links
-        </div>
-    </div>    
-</footer>
+
 {%endblock%}
