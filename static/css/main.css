@@ -82,8 +82,13 @@
     margin-bottom: 20px;
 }
 
-.featured-orange-text { 
+.featured-text-head {
+    font-size: 1.1em; 
     padding: 2px;
+}
+
+.featured-text-flavour {
+    padding: 0px;
 }
 
 .featured-blue-img {
@@ -99,9 +104,6 @@
     margin-bottom: 20px;
 }
 
-.featured-blue-text { 
-    padding: 2px;
-}
 
 .featured-yellow-img {
     background-image: url('../../static/img/cider-bottle-yellow.png');
@@ -116,9 +118,6 @@
     margin-bottom: 20px;
 }
 
-.featured-yellow-text { 
-    padding: 2px;
-}
 
 /*NAV*/
 
