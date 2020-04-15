@@ -2,8 +2,10 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{%static 'css/main.css'%}">
     <title>
     	Home
@@ -39,29 +41,32 @@
         </div>
     </nav>
 
-    <div class="homepage-featured">
-        <div>
+    <div>
+        <div class="title-featured">
             <h2>Featured</h2>
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <a class="featured-orange-img" href=""></a>
-                <p class="featured-text-head">Natura</p>
-                <p class="featured-text-flavour">Orange</p>
+        <div class="homepage-featured">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="featured-orange-img" href=""></a>
+                    <p class="featured-text-head">Natura</p>
+                    <p class="featured-text-flavour">Orange</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="featured-blue-img" href=""></a>
+                    <p class="featured-text-head">Natura</p>
+                    <p class="featured-text-flavour">Blue</p>
+                </div>
+                <div class="col-md-4">
+                    <a class="featured-yellow-img" href=""></a>
+                    <p class="featured-text-head">Natura</p>
+                    <p class="featured-text-flavour">Yellow</p>
+                </div>
             </div>
-            <div class="col-md-4">
-                <a class="featured-blue-img" href=""></a>
-                <p class="featured-text-head">Natura</p>
-                <p class="featured-text-flavour">Blue</p>
+            <div>
+                <a href="{%url 'products'%}"><u>Browse more products...</u></a>
             </div>
-            <div class="col-md-4">
-                <a class="featured-yellow-img" href=""></a>
-                <p class="featured-text-head">Natura</p>
-                <p class="featured-text-flavour">Yellow</p>
-            </div>
-        </div>
-        <div>
-            <a href="{%url 'products'%}"><u>Browse more products...</u></a>
         </div>
     </div>  
 </div>
@@ -70,17 +75,11 @@
     <footer class="footer">
         <div class="row">
             <div class="col-md-8 row">
-                <div class="col-md-6 footer-news">
-                    <h4><u>What weve been up to 1</u></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                <div class="col-md-6 footer-text">
+                    <h4>Comment</h4>
                 </div>
-                <div class="col-md-6 footer-news">
-                    <h4><u>What weve been up to 2</u></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                <div class="col-md-6 footer-text">
+                    <h4>Comment</h4>
                 </div>
             </div>
             <div class="col-md-4">

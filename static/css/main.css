@@ -1,3 +1,7 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 /*HOMEPAGE*/
 
 .homepage {
@@ -54,7 +58,28 @@
   transform: scaleX(1);
 }
 
+/*CONTENT PAGE*/
+
+.content-page {
+    background-image: linear-gradient(#D1CDF0, #8DAEE4);
+    width: 100%;
+}
+
+.our-story-piece {
+    display: inline;
+    padding: 20px;
+}
+
+.our-story {
+    text-align: center;
+}
+
 /*features FOR HOMEPAGE*/
+
+.title-featured {
+    text-align: center;
+
+}
 
 .homepage-featured {
     background-image: linear-gradient(#D1CDF0, #8DAEE4);
@@ -63,7 +88,7 @@
     left:29%;
     margin-top: -50px;
     margin-left: -50px;
-    width: 50%;
+    width: 48%;
     text-align: center;
     border-radius: 25px;
     border-bottom: 10px;
@@ -170,12 +195,57 @@
   transform: scaleX(1);
 }
 
+/*PRODUCT PAGE*/
+
+.product-category {
+    text-align: center;
+    padding: 40px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    white-space: nowrap;
+}
+
+.product{
+    display: inline-block;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 200px;
+    height: 300px;
+}
+
+/*SCROLLBAR*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 /*FOOTER*/
 
 .footer {
     font-size: 0.75em;
     background-color: #1F1F1F;
     color: #ffff;
+    position: relative;
 }
 
 .footer-list-ul {
@@ -186,10 +256,10 @@
 .footer-list-li {
     display: inline-block;
     font-size: 2.25em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
 .footer-list-li:hover {
@@ -197,7 +267,7 @@
     transition: 0.3s;
 }
 
-footer-news {
+footer-text {
     font-size: 1em;
 }
 
