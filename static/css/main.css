@@ -268,6 +268,43 @@ body {
   background: #555;
 }
 
+/*OUR STORY*/
+
+.our-story-text{
+    width: 60%;
+    height: 200px;
+}
+
+.out-story-img-1{
+    background-image: url('../../static/img/power-plant-med.jpg');
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+ }
+
+ .out-story-img-2{
+    background-image: url('../../static/img/truck-delivery.jpg');
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+ }
+
+ .out-story-img-3{
+    background-image: url('../../static/img/beverages-store.jpg');
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: contain;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+ }
+ 
 
 /*FOOTER*/
 
