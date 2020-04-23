@@ -65,15 +65,6 @@ body {
     width: 100%;
 }
 
-.our-story-piece {
-    display: inline;
-    padding: 20px;
-}
-
-.our-story {
-    text-align: center;
-}
-
 /*features FOR HOMEPAGE*/
 
 .title-featured {
@@ -147,7 +138,7 @@ body {
 /*NAV*/
 
 .navbar-base {
-    background-color: grey;
+    background-color: #717476;
 }
 
 .nav-natura {
@@ -260,7 +251,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: grey;
+  background: #717476;
 }
 
 /* Handle on hover */
@@ -270,9 +261,29 @@ body {
 
 /*OUR STORY*/
 
+.our-story-piece {
+    display: inline;
+    padding: 20px;
+}
+
+.our-story {
+    text-align: center;
+}
+
+.piece {
+    background-color: rgba(113, 116, 118, 0.4); 
+    display: inline-block;
+    border-radius: 25px;
+    width: 70%;
+    height: 250;
+    margin: 20px;
+}
+
 .our-story-text{
-    width: 60%;
-    height: 200px;
+    width: 600px;
+    height: 150px;
+    display: inline-block;
+    opacity: 1 !important;
 }
 
 .out-story-img-1{
@@ -283,6 +294,7 @@ body {
     background-position: center;
     height: 200px;
     width: 200px;
+    opacity: 1 !important;
  }
 
  .out-story-img-2{
@@ -305,6 +317,32 @@ body {
     width: 200px;
  }
  
+/*CONTACT US*/
+
+.contact{
+    display: flex;
+}
+
+.contact-map {
+    width: 50%;
+}
+
+.contact-contant {
+    width: 50%;
+}
+
+.contact-info{
+    display: flex;
+}
+
+.font-awesome{
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+
+.font-awesome-title{
+    font-size: 1em;
+}
 
 /*FOOTER*/
 
