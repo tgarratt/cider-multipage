@@ -2,6 +2,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.page-title {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
 /*HOMEPAGE*/
 
 .homepage {
@@ -66,11 +71,6 @@ body {
 }
 
 /*features FOR HOMEPAGE*/
-
-.title-featured {
-    text-align: center;
-
-}
 
 .homepage-featured {
     background-image: linear-gradient(#D1CDF0, #8DAEE4);
@@ -271,11 +271,11 @@ body {
 }
 
 .piece {
-    background-color: rgba(113, 116, 118, 0.4); 
+    outline: 2px dashed black;
     display: inline-block;
     border-radius: 25px;
     width: 70%;
-    height: 250;
+    height: 250px;
     margin: 20px;
 }
 
@@ -283,7 +283,7 @@ body {
     width: 600px;
     height: 150px;
     display: inline-block;
-    opacity: 1 !important;
+    vertical-align: top;
 }
 
 .out-story-img-1{
@@ -292,9 +292,8 @@ body {
     display: inline-block;
     background-size: contain;
     background-position: center;
-    height: 200px;
-    width: 200px;
-    opacity: 1 !important;
+    height: 250px;
+    width: 250px;
  }
 
  .out-story-img-2{
@@ -303,8 +302,8 @@ body {
     display: inline-block;
     background-size: contain;
     background-position: center;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
  }
 
  .out-story-img-3{
@@ -313,8 +312,8 @@ body {
     display: inline-block;
     background-size: contain;
     background-position: center;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
  }
  
 /*CONTACT US*/
