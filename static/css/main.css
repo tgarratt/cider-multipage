@@ -2,6 +2,14 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
 .page-title {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -324,23 +332,28 @@ body {
 
 .contact-map {
     width: 50%;
+    height: 500px;
+    background-color: whitesmoke;
+    margin: 5px;
 }
 
-.contact-contant {
+.contact-content {
     width: 50%;
+    margin: 5px;
 }
 
 .contact-info{
     display: flex;
+    padding-top: 25px;
 }
 
 .font-awesome{
-    margin-left: 10px;
-    font-size: 1.5em;
+    margin: 0px 5px 20px 10px;
+    font-size: 2em;
 }
 
 .font-awesome-title{
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 /*FOOTER*/
