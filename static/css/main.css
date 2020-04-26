@@ -2,11 +2,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-a {
+.a-tag {
     color: #000;
 }
 
-a:hover {
+.a-tag:hover {
     color: #000;
 }
 
@@ -379,13 +379,17 @@ a:hover {
     margin-right: 0.5em;
 }
 
-.footer-list-li:hover {
-    color: #FCC023;
-    transition: 0.3s;
-}
-
 footer-text {
     font-size: 1em;
+}
+
+.a-tag-footer {
+    color: #ffff;
+}
+
+.a-tag-footer:hover {
+    color: #FCC023;
+    transition: 0.3s;
 }
 
 /*content*/
