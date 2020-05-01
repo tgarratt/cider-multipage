@@ -13,7 +13,15 @@ Contact us
 
         <div  class="contact-map">
             <div>
-                map API
+                <div id="map"></div>
+                <script>
+                    function initMap() {
+                    var everest = {lat: 27.988121, lng: 86.924973};
+                    var map = new google.maps.Map(
+                        document.getElementById('map'), {zoom: 5, center: everest});
+                    var marker = new google.maps.Marker({position: everest, map: map});
+                    }
+                </script>
             </div>
         </div>
 
@@ -51,8 +59,8 @@ Contact us
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </div>
                 <div  class="font-awesome-title">
-                    <p>In the uk, in a county</p>
-                    <p>Street name, warehouse number 42</p>
+                    <p>Nepal, Sagarmatha National Park</p>
+                    <p>the peak, 9000km</p>
                 </div>
             </div>    
 
