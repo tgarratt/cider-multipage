@@ -211,17 +211,12 @@ body {
     display: inline-block;
     padding-left: 100px;
     padding-right: 100px;
-    width: 300px;
+    width: 350px;
     height: 300px;
 }
 
-.product:hover{
-    display: inline-block;
-    padding-left: 100px;
-    padding-right: 100px;
-    width: 300px;
-    height: 300px;
-    filter: brightness(25%);
+.product-text-bottle{
+    text-align: left;
 }
 
  .product-img-bottle{
@@ -234,7 +229,12 @@ body {
     width: 150px;
  }
 
-  .product-img-crate{
+.product-img-bottle:hover{
+    filter: brightness(25%);
+    transition-duration: 0.4s;
+}
+
+.product-img-crate{
     background-image: url('../../static/img/natura-crate.png');
     background-repeat: no-repeat;
     display: inline-block;
@@ -244,7 +244,12 @@ body {
     width: 200px;
  }
 
-   .product-img-keg{
+.product-img-crate:hover{
+    filter: brightness(25%);
+    transition-duration: 0.4s;
+}
+
+.product-img-keg{
     background-image: url('../../static/img/natura-keg.png');
     background-repeat: no-repeat;
     display: inline-block;
@@ -254,26 +259,31 @@ body {
     width: 200px;
  }
 
+.product-img-keg:hover{
+    filter: brightness(25%);
+    transition-duration: 0.4s;
+}
+
 /*SCROLLBAR*/
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #717476;
+    background: #717476;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
 }
 
 /*OUR STORY*/
