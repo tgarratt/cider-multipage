@@ -49,21 +49,13 @@
         <div class="homepage-featured">
 
             <div class="row">
+            {%for featured in featured%}
                 <div class="col-md-4">
-                    <a class="featured-orange-img" href=""></a>
-                    <p class="featured-text-head">Natura</p>
-                    <p class="featured-text-flavour">Orange</p>
+                    <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.bottle_img}}')"></div>
+                    <p class="featured-text-title">{{featured.bottle_title}}</p>
+                    <p class="featured-text-price">£{{featured.bottle_price}}</p>
                 </div>
-                <div class="col-md-4">
-                    <a class="featured-blue-img" href=""></a>
-                    <p class="featured-text-head">Natura</p>
-                    <p class="featured-text-flavour">Blue</p>
-                </div>
-                <div class="col-md-4">
-                    <a class="featured-yellow-img" href=""></a>
-                    <p class="featured-text-head">Natura</p>
-                    <p class="featured-text-flavour">Yellow</p>
-                </div>
+            {%endfor%}
             </div>
             <div>
                 <a href="{%url 'products'%}" class="a-tag">Browse more products...</a>

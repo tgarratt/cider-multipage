@@ -93,9 +93,8 @@ body {
     border-bottom: 10px;
 }
 
-.featured-orange-img {
-    background-image: url('../../static/img/cider-bottle-orange.png');
-    width: 100px;
+.featured-img{
+    width: 150px;
     height: 300px;
     background-repeat: no-repeat;
     display: inline-block;
@@ -104,44 +103,17 @@ body {
     padding: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
+    z-index: 10;
 }
 
-.featured-text-head {
+.featured-text-title {
     font-size: 1.1em; 
     padding: 2px;
 }
 
-.featured-text-flavour {
+.featured-text-price {
     padding: 0px;
 }
-
-.featured-blue-img {
-    background-image: url('../../static/img/cider-bottle-blue.png');
-    width: 100px;
-    height: 300px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: contain;
-    background-position: center;
-    padding: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-
-.featured-yellow-img {
-    background-image: url('../../static/img/cider-bottle-yellow.png');
-    width: 100px;
-    height: 300px;
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: contain;
-    background-position: center;
-    padding: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 
 /*NAV*/
 
@@ -198,7 +170,6 @@ body {
 
 .product-category {
     text-align: center;
-    padding: 40px;
     overflow-y: hidden;
     overflow-x: auto;
     width: 70%;
@@ -209,18 +180,16 @@ body {
 
 .product{
     display: inline-block;
-    padding-left: 100px;
-    padding-right: 100px;
+
     width: 350px;
     height: 300px;
 }
 
-.product-text-bottle{
-    text-align: left;
+.product-text{
+    text-align: center;
 }
 
  .product-img-bottle{
-    background-image: url('../../static/img/cider-bottle-template.png');
     background-repeat: no-repeat;
     display: inline-block;
     background-size: contain;
@@ -235,12 +204,11 @@ body {
 }
 
 .product-img-crate{
-    background-image: url('../../static/img/natura-crate.png');
     background-repeat: no-repeat;
     display: inline-block;
     background-size: contain;
     background-position: center;
-    height: 350px;
+    height: 300px;
     width: 200px;
  }
 
@@ -250,12 +218,11 @@ body {
 }
 
 .product-img-keg{
-    background-image: url('../../static/img/natura-keg.png');
     background-repeat: no-repeat;
     display: inline-block;
     background-size: contain;
     background-position: center;
-    height: 350px;
+    height: 300px;
     width: 200px;
  }
 

@@ -10,153 +10,44 @@ Products
 
 {%block content%}
     <div>
-    
+        
         <div class="product-category">
+            {%for add_bottles in add_bottles%}
             <div class="product">
-                <div class="product-img-bottle"></div>
-                <div class="product-text-bottle">
-                    <div>bottle- flavour</div>
-                    <div>£0.00</div>
-                    <a href="#">view</a>
+                <div class="product-img-bottle" style="background-image: url('{{MEDIA_URL}}{{add_bottles.bottle_img}}')"></div>
+                <div class="product-text">
+                    <div>{{add_bottles.bottle_title}}</div>
+                    <div>£{{add_bottles.bottle_price}}</div>
+                    <a href="{%url 'cart'%}">add to cart</a>
                 </div>
             </div>
-                        
+            {%endfor%}
+        </div>
+        
+        <div class="product-category">
+            {%for add_crates in add_crates%}
             <div class="product">
-                <div class="product-img-bottle"></div>
-                <div class="product-text-bottle">
-                    <div>bottle- flavour</div>
-                    <div>£0.00</div>
-                    <a href="#">view</a>
+                <div class="product-img-crate"  style="background-image: url('{{MEDIA_URL}}{{add_crates.crate_img}}')"></div>
+                <div class="product-text">
+                    <div>{{add_crates.crate_title}}</div>
+                    <div>£{{add_crates.crate_price}}</div>
+                    <a href="#">add to cart</a>
                 </div>
             </div>
-
-            <div class="product">
-                <div class="product-img-bottle"></div>
-                <div class="product-text-bottle">
-                    <div>bottle- flavour</div>
-                    <div>£0.00</div>
-                    <a href="#">view</a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="product-img-bottle"></div>
-                <div class="product-text-bottle">
-                    <div>bottle- flavour</div>
-                    <div>£0.00</div>
-                    <a href="#">view</a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="product-img-bottle"></div>
-                <div class="product-text-bottle">
-                    <div>bottle- flavour</div>
-                    <div>£0.00</div>
-                    <a href="#">view</a>
-                </div>         
-            </div>
-
-            <div class="product">
-                <div class="product-img-bottle"></div>
-                <div class="product-text-bottle">
-                    <div>bottle- flavour</div>
-                    <div>£0.00</div>
-                    <a href="#">view</a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="product-img-bottle"></div>
-                <div class="product-text-bottle">
-                    <div>bottle- flavour</div>
-                    <div>£0.00</div>
-                    <a href="#">view</a>
-                </div>
-            </div>
-
-            <div class="product">
-                <div class="product-img-bottle"></div>
-                <div class="product-text-bottle">
-                    <div>bottle- flavour</div>
-                    <div>£0.00</div>
-                    <a href="#">view</a>
-                </div>
-            </div>
+            {%endfor%}
         </div>
 
         <div class="product-category">
+            {%for add_kegs in add_kegs%}
             <div class="product">
-                <div class="product-img-crate"></div>
-                <div>crates</div>
-                <div>price</div>
-                <a href="#">view</a>
+                <div class="product-img-keg"  style="background-image: url('{{MEDIA_URL}}{{add_kegs.keg_img}}')"></div>
+                <div class="product-text">
+                    <div>{{add_kegs.keg_title}}</div>
+                    <div>£{{add_kegs.keg_price}}</div>
+                    <a href="#">add to cart</a>
+                </div>
             </div>
-
-            <div class="product">
-                <div class="product-img-crate"></div>
-                <div>crates</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
-
-            <div class="product">
-                <div class="product-img-crate"></div>
-                <div>crates</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
-
-            <div class="product">
-                <div class="product-img-crate"></div>
-                <div>crates</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
-
-            <div class="product">
-                <div class="product-img-crate"></div>
-                <div>crates</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
-
-            <div class="product">
-                <div class="product-img-crate"></div>
-                <div>crates</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
-
-            <div class="product">
-                <div class="product-img-crate"></div>
-                <div>crates</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
-        </div>
-
-        <div class="product-category">
-            <div class="product">
-                <div class="product-img-keg"></div>
-                <div>kegs</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
-
-            <div class="product">
-                <div class="product-img-keg"></div>
-                <div>kegs</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
-
-            <div class="product">
-                <div class="product-img-keg"></div>
-                <div>kegs</div>
-                <div>price</div>
-                <a href="#">view</a>
-            </div>
+            {%endfor%}
         </div>
     
     </div>

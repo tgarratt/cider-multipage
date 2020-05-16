@@ -19,6 +19,8 @@ from home.views import home
 from products.views import products
 from contact_us.views import contact_us
 from our_story.views import our_story
+from cart.views import cart
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +28,5 @@ urlpatterns = [
     path(r'products', products, name='products'),
     path(r'contact_us', contact_us, name='contact_us'),
     path(r'our_story', our_story, name='our_story'),
+    path(r'cart', cart, name='cart'),
 ]

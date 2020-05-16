@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import add_bottle, add_crate, add_keg
 
-# Register your models here.
+admin.site.register(add_bottle)
+
+admin.site.register(add_crate)
+
+admin.site.register(add_keg)
