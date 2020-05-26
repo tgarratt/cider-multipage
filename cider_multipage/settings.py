@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'our_story',
     'contact_us',
     'products',
+    'sign_in',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"

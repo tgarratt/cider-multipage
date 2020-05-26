@@ -20,6 +20,8 @@ from products.views import products
 from contact_us.views import contact_us
 from our_story.views import our_story
 from cart.views import cart
+from sign_in.views import sign_in, sign_out
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -29,4 +31,6 @@ urlpatterns = [
     path(r'contact_us', contact_us, name='contact_us'),
     path(r'our_story', our_story, name='our_story'),
     path(r'cart', cart, name='cart'),
+    path(r'sign_in', sign_in, name='sign_in'),
+    path(r'sign_out', sign_out, name='sign_out'),
 ]

@@ -33,16 +33,26 @@
                 <a class="nav-natura-hp col-md-2" href="{%url 'home'%}"></a>
             <ul class="navbar-nav col-md-5 row">
                 <li class="nav-item col-6">
-                    <a class="nav-link nav-link-hp" href="{%url 'our_story'%}">Our story</a>
+                    <a class="nav-link nav-link-hp" href="{%url 'our_story'%}">Our Story</a>
                 </li>
                 <li class="nav-item col-6">
-                    <a class="nav-link nav-link-hp" href="{%url 'contact_us'%}">Contact us</a>
+                    <a class="nav-link nav-link-hp" href="{%url 'contact_us'%}">Contact Us</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div>
+        <div>
+            {%if messages%}
+            <div class="message-home">
+                {%for message in messages%}
+                    {{message}}
+                 {%endfor%}
+            </div>
+            {%endif%}
+        </div>
+
         <div class="page-title">
             <h1>Featured</h1>
         </div>
@@ -52,12 +62,17 @@
             {%for featured in featured%}
                 <div class="col-md-4">
                     <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.bottle_img}}')"></div>
-                    <p class="featured-text-title">{{featured.bottle_title}}</p>
-                    <p class="featured-text-price">£{{featured.bottle_price}}</p>
+                        <div class="featured-text">
+                            <div>{{featured.bottle_title}}</div>
+                            <div>£{{featured.bottle_price}}</div>
+                        </div>
+                        <div>
+                            <a href="#">Add to cart</a>
+                        </div>
                 </div>
             {%endfor%}
             </div>
-            <div>
+            <div class="featured-browsemore">
                 <a href="{%url 'products'%}" class="a-tag">Browse more products...</a>
             </div>
         </div>
@@ -69,13 +84,13 @@
         <div class="row">
             <div class="col-md-8 row">
                 <div class="col-md-6">
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus erat vitae eleifend rutrum.</h4>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus erat vitae eleifend rutrum.</div>
                 </div>
                 <div class="col-md-6">
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus erat vitae eleifend rutrum.</h4>
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rhoncus erat vitae eleifend rutrum.</div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 footer-icons-mobile">
                 <ul class="footer-list-ul">
                     <li class="footer-list-li">
                     <a href="https://www.linkedin.com/in/tom-garratt-303284168/" target="_blank" class="a-tag-footer"><i class="fa fa-linkedin-square"></i></a>
@@ -88,6 +103,19 @@
                     <li class="footer-list-li">
                     <a href="https://twitter.com/Twitter" target="_blank" class="a-tag-footer"><i class="fa fa-twitter-square"></i></a>
                     </li>
+                    {%if user.is_superuser %}
+
+                    <li class="footer-list-li">
+                    <a class="a-tag" href="{%url 'sign_out'%}"><i class="fa fa-unlock-alt sign-in" aria-hidden="true"></i></i></a>
+                    </li>
+
+                    {%else%}
+
+                    <li class="footer-list-li">
+                    <a class="a-tag" href="{%url 'sign_in'%}"><i class="fa fa-lock sign-in" aria-hidden="true"></i></a>
+                    </li>
+
+                    {%endif%}
                 </ul>
             </div>
         </div>    
