@@ -1,0 +1,21 @@
+{%extends "base.html"%}
+
+{%block title%}
+Add Crate
+{%endblock%}
+
+{%block heading%}
+Add Crate
+{%endblock%}
+
+{%block content%}
+    <div class="product-form">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {{crate_form}}
+
+            <button type="submit" class="btn btn-light btn-sm">Add to products</button>
+        </form>
+    </div>
+{%endblock%}

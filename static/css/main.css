@@ -10,6 +10,16 @@ body {
     color: #000;
 }
 
+form button {
+    margin-bottom: 100% !important;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+form {
+    display: inline-block;
+}
+
 .page-title {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -18,7 +28,7 @@ body {
 /*HOMEPAGE*/
 
 .homepage {
-    background-image: url('../../static/img/homepage-pinksky-bg-lg.jpg');
+    background-image: url('../../static/img/miscellaneous/homepage-pinksky-bg-lg.jpg');
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
@@ -36,7 +46,7 @@ body {
 /*nav FOR HOMEPAGE*/
 
 .nav-natura-hp {
-    background-image: url('../../static/img/Natura-logo.png');
+    background-image: url('../../static/img/miscellaneous/Natura-logo.png');
     width: 8em;
     height: 8em;
     background-repeat: no-repeat;
@@ -115,11 +125,6 @@ body {
     z-index: 10;
 }
 
-.featured-img:hover{
-    filter: brightness(25%);
-    transition-duration: 0.4s;
-}
-
 .featured-text {
     font-size: 1.1em; 
     padding: 2px;
@@ -136,7 +141,7 @@ body {
 }
 
 .nav-natura {
-    background-image: url('../../static/img/Natura-logo.png');
+    background-image: url('../../static/img/miscellaneous/Natura-logo.png');
     width: 8em;
     height: 8em;
     background-repeat: no-repeat;
@@ -194,11 +199,11 @@ body {
     margin-left: 15%;
     margin-right: 15%;
     white-space: nowrap;
+    padding-top: 15px;
 }
 
 .product{
     display: inline-block;
-
     width: 350px;
     height: 300px;
 }
@@ -216,11 +221,6 @@ body {
     width: 150px;
  }
 
-.product-img-bottle:hover{
-    filter: brightness(25%);
-    transition-duration: 0.4s;
-}
-
 .product-img-crate{
     background-repeat: no-repeat;
     display: inline-block;
@@ -229,11 +229,6 @@ body {
     height: 300px;
     width: 200px;
  }
-
-.product-img-crate:hover{
-    filter: brightness(25%);
-    transition-duration: 0.4s;
-}
 
 .product-img-keg{
     background-repeat: no-repeat;
@@ -244,9 +239,42 @@ body {
     width: 200px;
  }
 
-.product-img-keg:hover{
-    filter: brightness(25%);
-    transition-duration: 0.4s;
+.add-product {
+    vertical-align: top;
+    float: left;
+}
+
+.add-product:hover {
+    color: #FCC023 !important;
+    transition-duration: 0.2s;
+}
+
+.product-form {
+   padding-left: 40%;
+}
+
+.product-form form input {
+    margin: 3px;
+    display: block;
+    width: 300px !important;
+}
+
+.product-form form label {
+    font-size: 1.2em;
+    padding-top: 20px;
+}
+
+.prod-settings {
+    display: inline-block !important;
+}
+
+.settings {
+    padding: 10px;
+}
+
+.fa-trash:hover {
+    color: #D40B0B;
+    transition-duration: 0.3s;
 }
 
 /*SCROLLBAR*/
@@ -271,63 +299,6 @@ body {
     background: #555;
 }
 
-/*OUR STORY*/
-
-.our-story-piece {
-    display: inline;
-    padding: 20px;
-}
-
-.our-story {
-    text-align: center;
-}
-
-.piece {
-    outline: 2px dashed black;
-    display: inline-block;
-    border-radius: 25px;
-    width: 70%;
-    height: 250px;
-    margin: 20px;
-}
-
-.our-story-text{
-    width: 600px;
-    height: 150px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.out-story-img-1{
-    background-image: url('../../static/img/power-plant-med.jpg');
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: contain;
-    background-position: center;
-    height: 250px;
-    width: 250px;
- }
-
- .out-story-img-2{
-    background-image: url('../../static/img/truck-delivery.jpg');
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: contain;
-    background-position: center;
-    height: 250px;
-    width: 250px;
- }
-
- .out-story-img-3{
-    background-image: url('../../static/img/beverages-store.jpg');
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-size: contain;
-    background-position: center;
-    height: 250px;
-    width: 250px;
- }
- 
 /*CONTACT US*/
 
 .contact{
@@ -367,26 +338,16 @@ body {
     text-align: center;
 }
 
-form {
-    display: inline-block;
-}
-
-form input {
-    margin: 3px;
-    display: block;
-    width: 300px !important;
-    outline: 1px solid black;
-}
-
-form label {
+.access-form form label {
     font-size: 1.2em;
     padding-top: 30px;
 }
 
-form button {
-    margin-bottom: 100% !important;
-    margin-top: 10px;
-    margin-left: 5px;
+.access-form form input {
+    margin: 3px;
+    display: block;
+    width: 300px !important;
+    outline: 1px solid black;
 }
 
 /*FOOTER*/

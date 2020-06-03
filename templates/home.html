@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse justify-content-center row" id="navbarNav">
             <ul class="navbar-nav col-md-5 row">
                 <li class="nav-item active col-md-6">
-                    <a class="nav-link nav-link-hp" href="{%url 'home'%}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link nav-link-hp" href="{%url 'home'%}">Home</a>
                 </li>
                 <li class="nav-item col-6">
                     <a class="nav-link nav-link-hp" href="{%url 'products'%}">Products</a>
@@ -33,10 +33,10 @@
                 <a class="nav-natura-hp col-md-2" href="{%url 'home'%}"></a>
             <ul class="navbar-nav col-md-5 row">
                 <li class="nav-item col-6">
-                    <a class="nav-link nav-link-hp" href="{%url 'our_story'%}">Our Story</a>
+                    <a class="nav-link nav-link-hp" href="{%url 'contact_us'%}">Contact Us</a>
                 </li>
                 <li class="nav-item col-6">
-                    <a class="nav-link nav-link-hp" href="{%url 'contact_us'%}">Contact Us</a>
+                    <a class="nav-link nav-link-hp" href="{%url 'cart'%}">Cart</a>
                 </li>
             </ul>
         </div>
@@ -62,12 +62,12 @@
             {%for featured in featured%}
                 <div class="col-md-4">
                     <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.bottle_img}}')"></div>
-                        <div class="featured-text">
+                    <div class="featured-text">
                             <div>{{featured.bottle_title}}</div>
                             <div>£{{featured.bottle_price}}</div>
                         </div>
                         <div>
-                            <a href="#">Add to cart</a>
+                            <a href="{%url 'home'%}">Add to cart</a>
                         </div>
                 </div>
             {%endfor%}
