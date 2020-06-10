@@ -1,10 +1,10 @@
 from django.db import models
-from products.models import add_bottle
+from products.models import add_product
 
 # Create your models here.
 
 class OrderProduct(models.Model):
-    product = models.OneToOneField(add_bottle, on_delete=models.SET_NULL, null=True)
+    product = models.OneToOneField(add_product, on_delete=models.SET_NULL, null=True)
     ordered = models.BooleanField(default=False)
     when = models.DateTimeField(null=True)
 

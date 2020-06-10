@@ -1,11 +1,11 @@
 {%extends "base.html"%}
 
 {%block title%}
-Add Crate
+Add Bottle
 {%endblock%}
 
 {%block heading%}
-Add Crate
+Add Bottle
 {%endblock%}
 
 {%block content%}
@@ -13,7 +13,7 @@ Add Crate
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
 
-            {{crate_form}}
+            {{product_form}}
 
             <button type="submit" class="btn btn-light btn-sm">Add to products</button>
         </form>

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from .models import OrderProduct, Order
-from products.models import add_bottle
+from products.models import add_product
 
 def cart(request):
     # returns homepage
@@ -11,7 +11,7 @@ def cart(request):
 
 def add_to_cart (request, pk=None):
     # adds product to the cart
-    product = add_bottle.objects.filter(pk=pk).first()
+    product = add_product.objects.filter(pk=pk).first()
 
     order_product, status = OrderProduct.objects.get_or_create(product=product)
     print(OrderProduct.product)

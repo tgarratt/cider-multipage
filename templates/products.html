@@ -24,69 +24,74 @@ Products
     <div>
         
         <div class="product-category">
+
             {%if user.is_superuser %}
-                <a class="a-tag add-product" href="{%url 'get_add_bottle_form'%}">Add  <i class="fa fa-plus" aria-hidden="true"></i></a>
+                <a class="a-tag add-product" href="{%url 'get_add_product_form'%}">Add  <i class="fa fa-plus" aria-hidden="true"></i></a>
             {%endif%}
+
             {%for add_bottles in add_bottles%}
+
                 <div class="product">
-                    <div class="product-img-bottle" style="background-image: url('{{MEDIA_URL}}{{add_bottles.bottle_img}}')"></div>
+                    <div class="product-img-bottle" style="background-image: url('{{MEDIA_URL}}{{add_bottles.product_img}}')"></div>
                     <div class="product-text">
-                        <div>{{add_bottles.bottle_title}}</div>
-                        <div>£{{add_bottles.bottle_price}}</div>
+                        <div>{{add_bottles.product_title}}</div>
+                        <div>£{{add_bottles.product_price}}</div>
                         <a href="{%url 'add_to_cart' add_bottles.id %}">add to cart</a>
                         <div>
                             {%if user.is_superuser %}
-                            <a class="a-tag settings" href="{% url 'bottlepk_edit' add_bottles.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="a-tag settings" href="{% url 'bottlepk_delete' add_bottles.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a class="a-tag settings" href="{% url 'productpk_edit' add_bottles.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="a-tag settings" href="{% url 'productpk_delete' add_bottles.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             {%endif%}
                         </div>
                     </div>
                 </div>
+
             {%endfor%}
+
         </div>
         
         <div class="product-category">
-            {%if user.is_superuser %}
-                <a class="a-tag add-product" href="{%url 'get_add_crate_form'%}">Add <i class="fa fa-plus" aria-hidden="true"></i></a>
-            {%endif%}
+
             {%for add_crates in add_crates%}
                 <div class="product">
-                    <div class="product-img-crate"  style="background-image: url('{{MEDIA_URL}}{{add_crates.crate_img}}')"></div>
+                    <div class="product-img-crate"  style="background-image: url('{{MEDIA_URL}}{{add_crates.product_img}}')"></div>
                     <div class="product-text">
-                        <div>{{add_crates.crate_title}}</div>
-                        <div>£{{add_crates.crate_price}}</div>
+                        <div>{{add_crates.product_title}}</div>
+                        <div>£{{add_crates.product_price}}</div>
                         <a href="#">add to cart</a>
                         <div>
                             {%if user.is_superuser %}
-                            <a class="a-tag settings" href="{% url 'cratepk_edit' add_crates.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="a-tag settings" href="{% url 'cratepk_delete' add_crates.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a class="a-tag settings" href="{% url 'productpk_edit' add_crates.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="a-tag settings" href="{% url 'productpk_delete' add_crates.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             {%endif%}
                         </div>
                     </div>
                 </div>
+
             {%endfor%}
+
         </div>
 
         <div class="product-category">
-            {%if user.is_superuser %}
-                <a class="a-tag add-product" href="{%url 'get_add_keg_form'%}">Add <i class="fa fa-plus" aria-hidden="true"></i></a>
-            {%endif%}
+
             {%for add_kegs in add_kegs%}
                 <div class="product">
-                    <div class="product-img-keg"  style="background-image: url('{{MEDIA_URL}}{{add_kegs.keg_img}}')"></div>
+                    <div class="product-img-keg"  style="background-image: url('{{MEDIA_URL}}{{add_kegs.product_img}}')"></div>
                     <div class="product-text">
-                        <div>{{add_kegs.keg_title}}</div>
-                        <div>£{{add_kegs.keg_price}}</div>
+                        <div>{{add_kegs.product_title}}</div>
+                        <div>£{{add_kegs.product_price}}</div>
                         <a href="#">add to cart</a>
                         <div>
                             {%if user.is_superuser %}
-                            <a class="a-tag settings" href="{% url 'kegpk_edit' add_kegs.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="a-tag settings" href="{% url 'kegpk_delete' add_kegs.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a class="a-tag settings" href="{% url 'productpk_edit' add_kegs.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="a-tag settings" href="{% url 'productpk_delete' add_kegs.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                             {%endif%}
                         </div>
                     </div>
                 </div>
+
             {%endfor%}
+            
         </div>
     
     </div>

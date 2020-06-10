@@ -61,10 +61,10 @@
             <div class="row">
             {%for featured in featured%}
                 <div class="col-md-4">
-                    <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.bottle_img}}')"></div>
+                    <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.product_img}}')"></div>
                     <div class="featured-text">
-                            <div>{{featured.bottle_title}}</div>
-                            <div>£{{featured.bottle_price}}</div>
+                            <div>{{featured.product_title}}</div>
+                            <div>£{{featured.product_price}}</div>
                         </div>
                         <div>
                             <a href="{%url 'home'%}">Add to cart</a>
