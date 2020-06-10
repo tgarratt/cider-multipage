@@ -16,7 +16,7 @@ form button {
     margin-left: 5px;
 }
 
-form {
+.form {
     display: inline-block;
 }
 
@@ -262,6 +262,7 @@ form {
 .product-form form label {
     font-size: 1.2em;
     padding-top: 20px;
+    text-decoration: underline;
 }
 
 .prod-settings {
@@ -277,6 +278,31 @@ form {
     transition-duration: 0.3s;
 }
 
+.product-editform {
+   padding-left: 40%;
+   
+}
+
+.product-editform form input {
+    margin: 3px;
+    width: 300px !important;
+    display: block;
+    
+}
+
+.product-editform form label {
+    font-size: 1.2em;
+    padding-top: 20px;
+    display: block;
+    text-decoration: underline;
+}
+
+.message-products{
+    text-align: center;
+    font-size: 1.3em;
+    color: #717476;
+
+}
 /*SCROLLBAR*/
 
 /* width */

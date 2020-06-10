@@ -6,7 +6,7 @@ class add_bottle_form(forms.ModelForm):
     class Meta:
         model = add_bottle
         fields = (
-            'bottle_title', 'bottle_price', 'bottle_img', 'featured')
+            'product_type', 'bottle_title', 'bottle_price', 'bottle_img', 'featured')
 
 
 

@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.contrib import messages
 from .models import add_bottle, add_crate, add_keg
 from .forms import add_bottle_form, add_crate_form, add_keg_form
 
@@ -139,3 +140,5 @@ def kegpk_edit(request, pk):
 
     return render(request, "../templates/product_edit.html", {
         "edit_info": edit_info_keg})
+
+

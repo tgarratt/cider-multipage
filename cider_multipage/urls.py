@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from home.views import home
 from contact_us.views import contact_us
-from cart.views import cart
+from cart.views import cart,  add_to_cart
 from sign_in.views import sign_in, sign_out
 from products.views import products, get_add_bottle_form, get_add_crate_form, get_add_keg_form, bottlepk_delete, cratepk_delete, kegpk_delete, bottlepk_edit, cratepk_edit, kegpk_edit
 from django.contrib.auth import views as auth_views
@@ -40,4 +40,5 @@ urlpatterns = [
     path(r'cratepk_edit/(?P<pk>\d+)', cratepk_edit, name='cratepk_edit'),
     path(r'kegpk_delete/(?P<pk>\d+)', kegpk_delete, name='kegpk_delete'),
     path(r'kegpk_edit/(?P<pk>\d+)', kegpk_edit, name='kegpk_edit'),
+    path(r'add_to_cart/(?P<pk>\d+)', add_to_cart, name='add_to_cart'),
 ]

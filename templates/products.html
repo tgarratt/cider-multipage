@@ -12,6 +12,16 @@ Products
 <div>
 
     <div>
+        {%if messages%}
+        <div class="message-products">
+            {%for message in messages%}
+                {{message}}
+            {%endfor%}
+        </div>
+        {%endif%}
+    </div>
+
+    <div>
         
         <div class="product-category">
             {%if user.is_superuser %}
@@ -23,7 +33,7 @@ Products
                     <div class="product-text">
                         <div>{{add_bottles.bottle_title}}</div>
                         <div>£{{add_bottles.bottle_price}}</div>
-                        <a href="{%url 'products'%}">add to cart</a>
+                        <a href="{%url 'add_to_cart' add_bottles.id %}">add to cart</a>
                         <div>
                             {%if user.is_superuser %}
                             <a class="a-tag settings" href="{% url 'bottlepk_edit' add_bottles.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -45,7 +55,7 @@ Products
                     <div class="product-text">
                         <div>{{add_crates.crate_title}}</div>
                         <div>£{{add_crates.crate_price}}</div>
-                        <a href="{%url 'products'%}">add to cart</a>
+                        <a href="#">add to cart</a>
                         <div>
                             {%if user.is_superuser %}
                             <a class="a-tag settings" href="{% url 'cratepk_edit' add_crates.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -67,7 +77,7 @@ Products
                     <div class="product-text">
                         <div>{{add_kegs.keg_title}}</div>
                         <div>£{{add_kegs.keg_price}}</div>
-                        <a href="{%url 'products'%}">add to cart</a>
+                        <a href="#">add to cart</a>
                         <div>
                             {%if user.is_superuser %}
                             <a class="a-tag settings" href="{% url 'kegpk_edit' add_kegs.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
