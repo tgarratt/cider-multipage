@@ -13,7 +13,8 @@ Cart
 <div>
 
     {%for get_cart_items in get_cart_items%}
-        
+        <div>{{get_cart_items.product.product_title}}</div>
+        <div>{{get_cart_items.product.product_price}}</div>
     {%endfor%}
 
 </div>

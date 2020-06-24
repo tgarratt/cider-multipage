@@ -67,7 +67,7 @@
                             <div>£{{featured.product_price}}</div>
                         </div>
                         <div>
-                            <a href="{%url 'home'%}">Add to cart</a>
+                            <a href="{%url 'add_to_cart' featured.id %}">Add to cart</a>
                         </div>
                 </div>
             {%endfor%}

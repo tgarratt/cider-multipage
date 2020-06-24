@@ -27,7 +27,7 @@ def get_add_product_form(request):
     else:
         product_form = add_product_form()
 
-    return render(request, "../templates/add_bottle.html", {"product_form": product_form})
+    return render(request, "../templates/add_product.html", {"product_form": product_form})
 
 def productpk_delete(request, pk=None):
     # deletes selected product

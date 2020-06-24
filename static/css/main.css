@@ -240,8 +240,7 @@ form button {
  }
 
 .add-product {
-    vertical-align: top;
-    float: left;
+    padding-left: 10px;
 }
 
 .add-product:hover {

@@ -5,7 +5,10 @@ Products
 {%endblock%}
 
 {%block heading%}
-Products
+    Products
+    {%if user.is_superuser %}
+                <a class="a-tag add-product" href="{%url 'get_add_product_form'%}"><i class="fa fa-plus" aria-hidden="true"></i></a>         
+    {%endif%}
 {%endblock%}
 
 {%block content%}
@@ -24,10 +27,6 @@ Products
     <div>
         
         <div class="product-category">
-
-            {%if user.is_superuser %}
-                <a class="a-tag add-product" href="{%url 'get_add_product_form'%}">Add  <i class="fa fa-plus" aria-hidden="true"></i></a>
-            {%endif%}
 
             {%for add_bottles in add_bottles%}
 
@@ -58,7 +57,7 @@ Products
                     <div class="product-text">
                         <div>{{add_crates.product_title}}</div>
                         <div>£{{add_crates.product_price}}</div>
-                        <a href="#">add to cart</a>
+                        <a href="{%url 'add_to_cart' add_crates.id %}">add to cart</a>
                         <div>
                             {%if user.is_superuser %}
                             <a class="a-tag settings" href="{% url 'productpk_edit' add_crates.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
@@ -80,7 +79,7 @@ Products
                     <div class="product-text">
                         <div>{{add_kegs.product_title}}</div>
                         <div>£{{add_kegs.product_price}}</div>
-                        <a href="#">add to cart</a>
+                        <a href="{%url 'add_to_cart' add_kegs.id %}">add to cart</a>
                         <div>
                             {%if user.is_superuser %}
                             <a class="a-tag settings" href="{% url 'productpk_edit' add_kegs.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>

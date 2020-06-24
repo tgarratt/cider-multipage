@@ -9,7 +9,7 @@ class add_product(models.Model):
         max_length=50, choices=PRODUCT_CHOICES, default='')
     product_title = models.CharField(max_length=50, blank=False)
     product_price = models.DecimalField(blank=False, max_digits=10, decimal_places=2)
-    product_img = models.ImageField(upload_to="static/img/bottle", blank=True, null=True)
+    product_img = models.ImageField(upload_to="static/img/product", blank=True, null=True)
     featured = models.BooleanField(default=False)
 
     def __str__(self):
