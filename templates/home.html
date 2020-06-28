@@ -36,7 +36,7 @@
                     <a class="nav-link nav-link-hp" href="{%url 'contact_us'%}">Contact Us</a>
                 </li>
                 <li class="nav-item col-6">
-                    <a class="nav-link nav-link-hp" href="{%url 'cart'%}">Cart</a>
+                    <a class="nav-link nav-link-hp" href="{%url 'cart_detail'%}">Cart</a>
                 </li>
             </ul>
         </div>
@@ -67,7 +67,7 @@
                             <div>£{{featured.product_price}}</div>
                         </div>
                         <div>
-                            <a href="{%url 'add_to_cart' featured.id %}">Add to cart</a>
+                            <a href="#">Add to cart</a>
                         </div>
                 </div>
             {%endfor%}

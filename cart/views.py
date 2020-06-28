@@ -1,26 +1,27 @@
-from django.shortcuts import render, redirect, reverse
-from django.contrib import messages
-from .models import OrderProduct, Order
+from django.shortcuts import render, redirect, get_object_or_404
+from django.views.decorators.http import require_POST
 from products.models import add_product
+from .cart import Cart
+from .forms import CartAddProductForm
 
-def cart(request):
-    # returns homepage
-    get_cart_items = OrderProduct.objects.all()
+@require_POST
+def cart_add(request, product_id):
+    cart = Cart(request)
+    product = get_object_or_404(add_product, id=product_id)
+    form = CartAddProductForm(request.POST)
+    if form.is_valid():
+        cd = form.cleaned_data
+        cart.add(product=product,
+                 quantity=cd['quantity'],
+                 update_quantity=cd['update'])
+    return redirect('cart_detail')
 
-    return render(request, "../templates/cart.html", {"get_cart_items": get_cart_items})
+def cart_remove(request, product_id):
+    cart = Cart(request)
+    product = get_object_or_404(add_product, id=product_id)
+    cart.remove(product)
+    return redirect('cart_detail')
 
-
-def add_to_cart (request, pk=None):
-    # adds product to the cart
-    
-    product = add_product.objects.filter(pk=pk).first()
-
-    order_product, status = OrderProduct.objects.get_or_create(product=product)
-   
-
-    messages.success(request, "Item added to cart!")
-
-    return redirect(reverse('products'))
-
-
-
+def cart_detail(request):
+    cart = Cart(request)
+    return render(request, 'cart.html', {'cart': cart})

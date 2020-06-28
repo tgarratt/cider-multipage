@@ -1,19 +1,20 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
+from cart.forms import CartAddProductForm
 from .models import add_product
 from .forms import add_product_form
 
 
+
 def products(request):
     # returns homepage
-    add_bottles = add_product.objects.filter(product_type="1")
-    add_crates = add_product.objects.filter(product_type="2")
-    add_kegs = add_product.objects.filter(product_type="3")
+    all_products = add_product.objects.all()
+    
+    cart_product_form = CartAddProductForm()
 
     return render(request, "../templates/products.html", 
-    {"add_bottles": add_bottles,
-    "add_crates": add_crates,
-    "add_kegs": add_kegs})
+    {"all_products": all_products,
+    "cart_product_form": cart_product_form})
 
 
 def get_add_product_form(request):

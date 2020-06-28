@@ -17,22 +17,24 @@ from django.contrib import admin
 from django.urls import path, include
 from home.views import home
 from contact_us.views import contact_us
-from cart.views import cart,  add_to_cart
+from cart.views import cart_detail, cart_add, cart_remove
 from sign_in.views import sign_in, sign_out
 from products.views import products, get_add_product_form, productpk_delete, productpk_edit
 from django.contrib.auth import views as auth_views
 
+app_name = "cider_multipage"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', home, name='home'),
     path(r'contact_us', contact_us, name='contact_us'),
-    path(r'cart', cart, name='cart'),
+    path(r'^cart_detail$', cart_detail, name='cart_detail'),
+    path(r'^add/(?P<product_id>\d+)/$', cart_add, name='cart_add'),
+    path(r'^remove/(?P<product_id>\d+)/$', cart_remove, name='cart_remove'),
     path(r'sign_in', sign_in, name='sign_in'),
     path(r'sign_out', sign_out, name='sign_out'),
     path(r'products', products, name='products'),
     path(r'get_add_product_form', get_add_product_form, name='get_add_product_form'),
     path(r'productpk_delete/(?P<pk>\d+)', productpk_delete, name='productpk_delete'),
     path(r'productpk_edit/(?P<pk>\d+)', productpk_edit, name='productpk_edit'),
-    path(r'add_to_cart/(?P<pk>\d+)', add_to_cart, name='add_to_cart'),
 ]
