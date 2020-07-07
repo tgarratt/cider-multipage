@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'contact_us',
     'products',
     'sign_in',
+    'checkout',
+    'stripe',
 ]
 
 MIDDLEWARE = [
@@ -128,6 +130,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STRIPE_PUBLISHABLE= env.STRIPE_PUBLISHABLE
+STRIPE_SECRET= env.STRIPE_SECRET
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 

@@ -8,6 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{%static 'css/main.css'%}">
+
+    <script src="https://js.stripe.com/v2/"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+    </script>
+    <script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+
     <title>
     	Home
     </title>
@@ -43,6 +52,10 @@
     </nav>
 
     <div>
+        <div class="page-title">
+            <h1>Featured</h1>
+        </div>
+
         <div>
             {%if messages%}
             <div class="message-home">
@@ -53,9 +66,6 @@
             {%endif%}
         </div>
 
-        <div class="page-title">
-            <h1>Featured</h1>
-        </div>
         <div class="homepage-featured">
 
             <div class="row">
@@ -64,10 +74,16 @@
                     <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.product_img}}')"></div>
                     <div class="featured-text">
                             <div>{{featured.product_title}}</div>
-                            <div>£{{featured.product_price}}</div>
-                        </div>
-                        <div>
-                            <a href="#">Add to cart</a>
+                            <div>
+                                <p>£{{featured.product_price}}</p>
+                            </div>
+                            <div>
+                                <form class="add-cart-qty" action="{% url 'cart_add' featured.id %}" method="post">
+                                    {{ cart_product_form }}
+                                    {% csrf_token %}
+                                    <input type="submit" value="Add to cart">
+                                </form>
+                            </div>
                         </div>
                 </div>
             {%endfor%}

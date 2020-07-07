@@ -20,6 +20,7 @@ from contact_us.views import contact_us
 from cart.views import cart_detail, cart_add, cart_remove
 from sign_in.views import sign_in, sign_out
 from products.views import products, get_add_product_form, productpk_delete, productpk_edit
+from checkout.views import checkout
 from django.contrib.auth import views as auth_views
 
 app_name = "cider_multipage"
@@ -37,4 +38,5 @@ urlpatterns = [
     path(r'get_add_product_form', get_add_product_form, name='get_add_product_form'),
     path(r'productpk_delete/(?P<pk>\d+)', productpk_delete, name='productpk_delete'),
     path(r'productpk_edit/(?P<pk>\d+)', productpk_edit, name='productpk_edit'),
+    path(r'checkout', checkout, name='payment'),
 ]

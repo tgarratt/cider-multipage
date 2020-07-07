@@ -37,7 +37,7 @@ Products
                         <div>{{all_products.product_title}}</div>
                         <div>
                             <p>£{{all_products.product_price}}<p>
-                            <form action="{% url 'cart_add' all_products.id %}" method="post">
+                            <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
                                 {{ cart_product_form }}
                                 {% csrf_token %}
                                 <input type="submit" value="Add to cart">
@@ -67,7 +67,7 @@ Products
                         <div>{{all_products.product_title}}</div>
                         <div>
                             <p>£{{all_products.product_price}}</p>
-                            <form action="{% url 'cart_add' all_products.id %}" method="post">
+                            <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
                                 {{ cart_product_form }}
                                 {% csrf_token %}
                                 <input type="submit" value="Add to cart">
@@ -99,7 +99,7 @@ Products
                         <div>{{all_products.product_title}}</div>
                         <div>
                             <p>£{{all_products.product_price}}</p>
-                            <form action="{% url 'cart_add' all_products.id %}" method="post">
+                            <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
                                 {{ cart_product_form }}
                                 {% csrf_token %}
                                 <input type="submit" value="Add to cart">
