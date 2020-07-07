@@ -24,6 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+#FOR EDIT
+#SECRET_KEY = env.DJANGOSECRETKEY
+#FOR DEPLOY
 SECRET_KEY = os.environ.get('DJANGOSECRETKEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -91,7 +95,6 @@ DATABASES = {
     }
 }
 
-#DATABASES = {'default': dj_database_url.parse(env.DATABASE_URL))}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -135,6 +138,11 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+
+#FOR EDIT
+#STRIPE_PUBLISHABLE= env.STRIPE_PUBLISHABLE
+#STRIPE_SECRET= env.STRIPE_SECRET
+#FOR DEPLOY
 STRIPE_PUBLISHABLE= os.environ.get('STRIPE_PUBLISHABLE')
 STRIPE_SECRET= os.environ.get('STRIPE_SECRET')
 
