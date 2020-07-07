@@ -135,8 +135,8 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STRIPE_PUBLISHABLE= env.STRIPE_PUBLISHABLE
-STRIPE_SECRET= env.STRIPE_SECRET
+STRIPE_PUBLISHABLE= os.environ.get('STRIPE_PUBLISHABLE')
+STRIPE_SECRET= os.environ.get('STRIPE_SECRET')
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
