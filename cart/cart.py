@@ -2,8 +2,8 @@ from decimal import Decimal
 from django.conf import settings
 from products.models import add_product
 from .forms import CheckoutUserInfoForm
-import json
-#import simplejson as json
+
+
 
 class Cart(object):
 
@@ -61,7 +61,7 @@ class Cart(object):
             self.cart[str(product.id)]['product'] = product
 
         for item in self.cart.values():
-            item['price'] = Decimal(item['price'])
+            item['price'] = float(item['price'])
             item['total_price'] = item['price'] * item['quantity']
             yield item
 
@@ -75,12 +75,10 @@ class Cart(object):
 
     def get_total_price(self):
     
-        total = sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
+        total = sum(float(item['price']) * item['quantity'] for item in self.cart.values())
+        FinalTotal = round(total, 2)
         
-        #json.dumps
-        #self.session['cart_total_cost'] = total
-
-        return total
+        return FinalTotal
 
     def clear(self):
         # remove cart from session

@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
-from decimal import Decimal
 from cart.cart import Cart
 from .forms import payment_form
 from cart.cart import Cart
@@ -15,21 +14,22 @@ stripe.api_key = settings.STRIPE_SECRET
 
 def checkout(request):
 
-    #amount_total = request.session.get('cart_total_cost') 
-    #print(amount_total)
+    cart = Cart(request)
+
+    cart_payment_total = cart.get_total_price()
+    print(cart_payment_total)
 
     if request.method == "POST":
-        print(request.POST)
         
         checkout_user_info = CheckoutUserInfoForm(request.POST, request.FILES)
         
         if checkout_user_info.is_valid():
-            print("validinfo")
+            print("payment valid")
             
     else:
         checkout_user_info = CheckoutUserInfoForm()
 
-    payment_amount = (100)
+    payment_amount = (cart_payment_total)
 
     if request.method == "POST":
         payment = payment_form(request.POST)

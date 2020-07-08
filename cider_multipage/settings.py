@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+#import dj_database_url
 try:
     import env
 except ModuleNotFoundError:
@@ -26,9 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 #FOR EDIT
-#SECRET_KEY = env.DJANGOSECRETKEY
+SECRET_KEY = env.DJANGOSECRETKEY
 #FOR DEPLOY
-SECRET_KEY = os.environ.get('DJANGOSECRETKEY')
+#SECRET_KEY = os.environ.get('DJANGOSECRETKEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -95,6 +96,7 @@ DATABASES = {
     }
 }
 
+#DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"), conn_max_age=600)}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -140,11 +142,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 #FOR EDIT
-#STRIPE_PUBLISHABLE= env.STRIPE_PUBLISHABLE
-#STRIPE_SECRET= env.STRIPE_SECRET
+STRIPE_PUBLISHABLE= env.STRIPE_PUBLISHABLE
+STRIPE_SECRET= env.STRIPE_SECRET
 #FOR DEPLOY
-STRIPE_PUBLISHABLE= os.environ.get('STRIPE_PUBLISHABLE')
-STRIPE_SECRET= os.environ.get('STRIPE_SECRET')
+#STRIPE_PUBLISHABLE= os.environ.get('STRIPE_PUBLISHABLE')
+#STRIPE_SECRET= os.environ.get('STRIPE_SECRET')
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 

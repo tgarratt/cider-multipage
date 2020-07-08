@@ -17,7 +17,7 @@ class Order(models.Model):
 class CheckoutUserInfo(models.Model):
     user_email = models.EmailField(verbose_name='E-mail', max_length=30)
     user_name = models.CharField(verbose_name='Full name', max_length=60)
-    user_price_total = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    user_price_total = models.FloatField(default=0)
     user_country = models.CharField(verbose_name='Country', max_length=60)
     user_city = models.CharField(verbose_name='City', max_length=60)
     user_line1 = models.CharField(verbose_name='Address line 1', max_length=60)
