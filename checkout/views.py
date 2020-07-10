@@ -5,6 +5,7 @@ from .forms import payment_form
 from cart.cart import Cart
 from django.conf import settings
 from cart.forms import CheckoutUserInfoForm
+from cart.models import CheckoutUserInfo
 import json
 import stripe
 
@@ -46,8 +47,14 @@ def checkout(request):
                 if customer.paid:
                     
                     checkout_user_info.save()
-                    messages.success(request, "You have successfully paid!")
-                    return redirect(reverse("home"))
+                    user_order_set_price = CheckoutUserInfo.objects.order_by('order_date').last()
+                    user_order_set_price.user_price_total = payment_amount
+                    user_order_set_price.save()
+
+                    messages.success(request, "You have successfully paid £" +  str(payment_amount) + "!")
+                    request.session.flush()
+
+                    return redirect(reverse("home"))  
 
                 else:
                     messages.error(request, "Unable to take payment!")

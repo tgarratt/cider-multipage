@@ -18,4 +18,4 @@ class CheckoutUserInfoForm(forms.ModelForm):
         fields = (
             'user_email', 'user_name', 'user_country',
              'user_city', 'user_line1', 'user_line2',
-              'user_postcode', 'user_countystate')    
+              'user_postcode', 'user_countystate') 
