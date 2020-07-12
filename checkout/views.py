@@ -83,4 +83,4 @@ def checkout(request):
             'publishable': settings.STRIPE_PUBLISHABLE,
             'payment_amount': payment_amount,
             'checkout_user_info': checkout_user_info,
-            'n': n})
+            'n': n, 'cart_payment_total': cart_payment_total})

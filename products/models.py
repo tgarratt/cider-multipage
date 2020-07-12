@@ -8,7 +8,7 @@ class add_product(models.Model):
     product_type = models.CharField(
         max_length=50, choices=PRODUCT_CHOICES, default='')
     product_title = models.CharField(max_length=50, blank=False)
-    product_price = models.FloatField(blank=False)
+    product_price = models.DecimalField(max_digits=10, default=0, decimal_places=2)
     product_img = models.ImageField(upload_to="static/img/product", blank=True, null=True)
     featured = models.BooleanField(default=False)
 

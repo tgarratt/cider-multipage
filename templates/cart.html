@@ -41,6 +41,7 @@ Cart
                         </td>
                         <td>{{ product.product_title }}</td>
                         <td>
+                            <div>{{item.quantity}}</div>
                             <form action="{% url 'cart_add' product.id %}" method="post">
                                 {% csrf_token %}
                                 {{ item.update_quantity_form.quantity }}

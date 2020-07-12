@@ -61,8 +61,9 @@ class Cart(object):
             self.cart[str(product.id)]['product'] = product
 
         for item in self.cart.values():
-            item['price'] = float(item['price'])
-            item['total_price'] = item['price'] * item['quantity']
+            item['price'] = Decimal(item['price'])
+            itmround = item['price'] * item['quantity']
+            item['total_price'] = round(itmround, 2)
             yield item
 
 
@@ -75,10 +76,9 @@ class Cart(object):
 
     def get_total_price(self):
     
-        total = sum(float(item['price']) * item['quantity'] for item in self.cart.values())
-        FinalTotal = round(total, 2)
+        total = sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
         
-        return FinalTotal
+        return total
 
     def clear(self):
         # remove cart from session
