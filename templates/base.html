@@ -53,8 +53,15 @@
                 <li class="nav-item col-6">
                     <a class="nav-link nav-link-hp" href="{%url 'contact_us'%}">Contact Us</a>
                 </li>
-                <li class="nav-item col-6">
-                    <a class="nav-link nav-link-hp" href="{%url 'cart_detail'%}">Cart</a>
+                <li class="nav-item col-6 cart-nav">
+                    <a class="nav-link nav-link-hp" href="{%url 'cart_detail'%}">Cart 
+                        <div class="cart-nav-n">
+                            {% if n == 0 %}
+                            {% else %}
+                            {{n}}
+                            {%endif%}
+                        </div>
+                    </a>
                 </li>
             </ul>
         </div>

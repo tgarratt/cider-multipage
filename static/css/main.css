@@ -92,6 +92,15 @@ form button {
   transform: scaleX(1);
 }
 
+.cart-nav {
+    display: inline !important;
+}
+.cart-nav-n {
+    display: inline !important;
+    padding-left: 3px;
+    font-weight: 700;
+}
+
 /*CONTENT PAGE*/
 
 .content-page {
@@ -392,9 +401,16 @@ form button {
 }
 
 .add-cart-qty input {
-    display: ;
     margin: auto;
 }
+
+.cart-empty {
+    padding-top: 10%;
+    height: 80%;
+    text-align: center;
+    font-size: 150%;
+}
+
 /*SIGN IN*/
 
 .access-form {

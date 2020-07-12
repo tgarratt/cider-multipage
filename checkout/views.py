@@ -16,6 +16,12 @@ stripe.api_key = settings.STRIPE_SECRET
 def checkout(request):
 
     cart = Cart(request)
+         
+    n = 0
+    for item in cart:
+        q = item['quantity']
+        n = n + q
+    print(n)
 
     cart_payment_total = cart.get_total_price()
     print(cart_payment_total)
@@ -76,4 +82,5 @@ def checkout(request):
             'payment': payment,
             'publishable': settings.STRIPE_PUBLISHABLE,
             'payment_amount': payment_amount,
-            'checkout_user_info': checkout_user_info})
+            'checkout_user_info': checkout_user_info,
+            'n': n})
