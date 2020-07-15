@@ -23,6 +23,13 @@ def checkout(request):
         n = n + q
     print(n)
 
+    # for item in cart:
+
+    #     allprod = item.product.product_title
+    #     print(allprod)
+
+    #     print("hi")
+
     cart_payment_total = cart.get_total_price()
     print(cart_payment_total)
 

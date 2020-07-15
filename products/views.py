@@ -6,18 +6,16 @@ from .forms import add_product_form
 from cart.cart import Cart
 
 
-
 def products(request):
     # returns homepage
 
     cart = Cart(request)
-         
+
     n = 0
     for item in cart:
         q = item['quantity']
         n = n + q
     print(n)
-
 
     all_products = add_product.objects.all()
     
