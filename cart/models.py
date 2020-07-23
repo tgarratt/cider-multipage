@@ -25,6 +25,7 @@ class CheckoutUserInfo(models.Model):
     user_postcode = models.CharField(verbose_name='Postcode', max_length=60)
     user_countystate = models.CharField(verbose_name='County/State', max_length=60)
     user_price_total = models.DecimalField(max_digits=10, default=0, decimal_places=2)
+    user_items = models.CharField(default="", max_length=1000)
     order_date = models.DateTimeField(
         blank=True, null=True, default=timezone.now)
 

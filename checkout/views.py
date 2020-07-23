@@ -23,12 +23,6 @@ def checkout(request):
         n = n + q
     print(n)
 
-    # for item in cart:
-
-    #     allprod = item.product.product_title
-    #     print(allprod)
-
-    #     print("hi")
 
     cart_payment_total = cart.get_total_price()
     print(cart_payment_total)
@@ -60,8 +54,21 @@ def checkout(request):
                 if customer.paid:
                     
                     checkout_user_info.save()
+
                     user_order_set_price = CheckoutUserInfo.objects.order_by('order_date').last()
                     user_order_set_price.user_price_total = payment_amount
+
+                    # prod = item['product']
+                    # prod_qnty = item['quantity']
+                    
+                    cartsaved = ""
+
+                    for item in cart:
+                        cartitem = str(item['product']) +"  x"+ str(item['quantity']) + ",   "
+                        cartsaved = cartitem + cartsaved
+
+                    user_order_set_price.user_items = cartsaved
+
                     user_order_set_price.save()
 
                     messages.success(request, "You have successfully paid £" +  str(payment_amount) + "!")
