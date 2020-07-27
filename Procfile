@@ -1,1 +1,1 @@
-web: gunicorn cider_multipage:application
+web: gunicorn cider_multipage:app
