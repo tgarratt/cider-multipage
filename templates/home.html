@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{%static 'css/main.css'%}">
+    <link rel="icon" type="image/png" href="../../static/img/miscellaneous/Natura-favicon.jpg"/>
 
     <script src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript">
@@ -44,16 +45,22 @@
                 <li class="nav-item col-6">
                     <a class="nav-link nav-link-hp" href="{%url 'contact_us'%}">Contact Us</a>
                 </li>
-                <li class="nav-item col-6 cart-nav">
-                    <a class="nav-link nav-link-hp" href="{%url 'cart_detail'%}">Cart 
-                        <div class="cart-nav-n">
-                            {% if n == 0 %}
-                            {% else %}
-                            {{n}}
-                            {%endif%}
-                        </div>
-                    </a>
-                </li>
+                {%if user.is_superuser %}
+                    <li class="nav-item col-6">
+                        <a class="nav-link" href="{%url 'admin_review'%}">Admin Review</a>
+                    </li>
+                {%else%}
+                    <li class="nav-item col-6 cart-nav">
+                        <a class="nav-link nav-link-hp" href="{%url 'cart_detail'%}">Cart 
+                            <div class="cart-nav-n">
+                                {% if n == 0 %}
+                                {% else %}
+                                {{n}}
+                                {%endif%}
+                            </div>
+                        </a>
+                    </li>
+                {%endif%}
             </ul>
         </div>
     </nav>

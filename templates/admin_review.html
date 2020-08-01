@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+
+{%block title%}
+Admin Review
+{%endblock%}
+
+{%block heading%}
+Admin review
+{%endblock%}
+
+{%block content%}
+    <div>
+        {%for all_checkoutuserinfo in all_checkoutuserinfo%}
+            <div>
+                {{all_checkoutuserinfo.user_email}}
+            </div>
+            <div>
+                {{all_checkoutuserinfo.user_price_total}}
+            </div>
+            <br>
+        {%endfor%}
+    </div>
+{%endblock%}
