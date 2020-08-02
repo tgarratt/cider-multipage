@@ -34,7 +34,7 @@ Checkout
 
     <form role="form" enctype= multipart/form-data method="post" id="payment-form" action="{%url 'payment'%}">
         {% csrf_token %}
-        <legend><b>Payment form</b> -if payment of £{{ cart_payment_total }} is successful you will be redirected to the homepage</legend>
+        <legend><b>Payment form</b> -if payment of £{{ payment_amount }} is successful you will be redirected to the homepage</legend>
         <div id="credit-card-errors" style="display:none">
             <div class="alert-message block-message error" id="stripe-error-message"></div>
         </div>

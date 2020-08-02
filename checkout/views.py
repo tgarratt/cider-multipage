@@ -37,7 +37,11 @@ def checkout(request):
     else:
         checkout_user_info = CheckoutUserInfoForm()
 
-    payment_amount = (cart_payment_total)
+    if cart_payment_total <= 20:
+        cart_payment_total_post = cart_payment_total + 5
+    else: 
+        cart_payment_total_post = cart_payment_total + 0
+    payment_amount = (cart_payment_total_post)
 
     if request.method == "POST":
         payment = payment_form(request.POST)
@@ -56,15 +60,14 @@ def checkout(request):
                     checkout_user_info.save()
 
                     user_order_set_price = CheckoutUserInfo.objects.order_by('order_date').last()
-                    user_order_set_price.user_price_total = payment_amount
+                    user_order_set_price.user_price_total = cart_payment_total
 
-                    # prod = item['product']
-                    # prod_qnty = item['quantity']
+
                     
                     cartsaved = ""
 
                     for item in cart:
-                        cartitem = str(item['product']) +"  x"+ str(item['quantity']) + ",   "
+                        cartitem = str(item['product']) +"  x"+ str(item['quantity']) + ",    "
                         cartsaved = cartitem + cartsaved
 
                     user_order_set_price.user_items = cartsaved

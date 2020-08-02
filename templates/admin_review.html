@@ -9,15 +9,38 @@ Admin review
 {%endblock%}
 
 {%block content%}
-    <div>
+    <div class="order-list">
         {%for all_checkoutuserinfo in all_checkoutuserinfo%}
-            <div>
-                {{all_checkoutuserinfo.user_email}}
+            <div class="order">
+                <div>
+                    <b>Email:  </b>{{all_checkoutuserinfo.user_email}}
+                </div>
+                <div>
+                    <b>Name:  </b>{{all_checkoutuserinfo.user_name}}
+                </div>
+                <div>
+                    <b>Total:  </b>£{{all_checkoutuserinfo.user_price_total}}
+                </div>
+                <br>
+                <div>
+                    <b>Order Date:  </b>{{all_checkoutuserinfo.order_date}}
+                </div>
+                <div>
+                    <b>Items:  </b>{{all_checkoutuserinfo.user_items}}
+                </div>
+                <br>
+                <div>
+                    <div><b>Adress: </b></div>
+                    <div>{{all_checkoutuserinfo.user_country}}, {{all_checkoutuserinfo.user_city}}</div>
+                    <div>{{all_checkoutuserinfo.user_countystate}}</div>
+                    <div>{{all_checkoutuserinfo.user_line1}}, {{all_checkoutuserinfo.user_line2}}</div>
+                    <div>{{all_checkoutuserinfo.user_postcode}}</div>
+                </div>
+                <br>
+                <div>
+                    <a href="{% url 'infopk_delete' all_checkoutuserinfo.id %}">Completed/Remove</a>
+                </div>
             </div>
-            <div>
-                {{all_checkoutuserinfo.user_price_total}}
-            </div>
-            <br>
         {%endfor%}
     </div>
 {%endblock%}
