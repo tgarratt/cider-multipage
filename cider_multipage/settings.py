@@ -95,15 +95,15 @@ WSGI_APPLICATION = 'cider_multipage.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 #DATABASE FOR EDIT
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 #DATABASE FOR DEPLOY
-DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+#DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
