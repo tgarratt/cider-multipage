@@ -27,9 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 #FOR EDIT
-# SECRET_KEY = env.DJANGOSECRETKEY
+SECRET_KEY = env.DJANGOSECRETKEY
 #FOR DEPLOY
-SECRET_KEY = os.environ.get('DJANGOSECRETKEY')
+# SECRET_KEY = os.environ.get('DJANGOSECRETKEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -95,15 +95,15 @@ WSGI_APPLICATION = 'cider_multipage.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 #DATABASE FOR EDIT
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 #DATABASE FOR DEPLOY
-DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+# DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -149,11 +149,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 #FOR EDIT
-# STRIPE_PUBLISHABLE= env.STRIPE_PUBLISHABLE
-# STRIPE_SECRET= env.STRIPE_SECRET
+STRIPE_PUBLISHABLE= env.STRIPE_PUBLISHABLE
+STRIPE_SECRET= env.STRIPE_SECRET
 #FOR DEPLOY
-STRIPE_PUBLISHABLE= os.environ.get('STRIPE_PUBLISHABLE')
-STRIPE_SECRET= os.environ.get('STRIPE_SECRET')
+# STRIPE_PUBLISHABLE= os.environ.get('STRIPE_PUBLISHABLE')
+# STRIPE_SECRET= os.environ.get('STRIPE_SECRET')
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
@@ -167,8 +167,8 @@ EMAIL_TIMEOUT = None
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 # FOR EDIT
-# EMAIL_HOST_USER = env.EMAIL_USERNAME
-# EMAIL_HOST_PASSWORD = env.EMAIL_PASSWORD
+EMAIL_HOST_USER = env.EMAIL_USERNAME
+EMAIL_HOST_PASSWORD = env.EMAIL_PASSWORD
 #FOR DEPLOY
-EMAIL_HOST_USER = os.environ.get('EMAIL_USERNAME')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+# EMAIL_HOST_USER = os.environ.get('EMAIL_USERNAME')
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
