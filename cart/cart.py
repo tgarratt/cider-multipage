@@ -83,7 +83,7 @@ class Cart(object):
     def price_until_free_post(self):
 
         total = sum(Decimal(item['price']) * item['quantity'] for item in self.cart.values())
-        until_free_post = 20 - total
+        until_free_post = 25 - total
 
         return until_free_post
 
