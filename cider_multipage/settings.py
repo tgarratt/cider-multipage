@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import psycopg2
 import dj_database_url
 try:
     import env
@@ -94,7 +95,7 @@ WSGI_APPLICATION = 'cider_multipage.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASE FOR EDIT
+# DATABASE FOR EDIT
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -103,7 +104,7 @@ WSGI_APPLICATION = 'cider_multipage.wsgi.application'
 # }
 
 #DATABASE FOR DEPLOY
-DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
