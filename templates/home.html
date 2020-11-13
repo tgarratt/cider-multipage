@@ -83,7 +83,7 @@
         <div class="homepage-featured">
 
             <div class="row">
-            <!-- {%for featured in featured%}
+            {%for featured in featured%}
                 <div class="col-md-4">
                     <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.product_img}}')"></div>
                     <div class="featured-text">
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                 </div>
-            {%endfor%} -->
+            {%endfor%}
             </div>
             <div class="featured-browsemore">
                 <a href="{%url 'products'%}" class="a-tag">Browse more products...</a>
