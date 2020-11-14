@@ -75,10 +75,10 @@ def checkout(request):
 
                     user_order_set_price.save()
 
-                    mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems please consult out contact page on our website."
+                    # mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems please consult out contact page on our website."
 
-                    send_mail('Your order!', 'this is an email about your order', settings.EMAIL_HOST_USER,
-                        [CheckoutUserInfo.user_email], fail_silently=False)
+                    # send_mail('Your order!', 'this is an email about your order', settings.EMAIL_HOST_USER,
+                    #     [CheckoutUserInfo.user_email], fail_silently=False)
 
                     messages.success(request, "You have successfully paid £" +  str(payment_amount) + "!")
                     request.session.flush()
