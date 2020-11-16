@@ -160,7 +160,7 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 CART_SESSION_ID = 'cart'
 
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smpt.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
