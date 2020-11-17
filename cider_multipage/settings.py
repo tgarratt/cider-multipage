@@ -156,6 +156,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STRIPE_PUBLISHABLE= os.environ.get('STRIPE_PUBLISHABLE')
 STRIPE_SECRET= os.environ.get('STRIPE_SECRET')
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 CART_SESSION_ID = 'cart'
