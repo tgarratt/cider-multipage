@@ -87,7 +87,7 @@
             <div class="row">
             {%for featured in featured%}
                 <div class="col-md-4">
-                    <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.product_img}}')"></div>
+                    <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.product_img.url}}')"></div>
                     <div class="featured-text">
                             <div>{{featured.product_title}}</div>
                             <div>
