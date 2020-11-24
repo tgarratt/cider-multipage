@@ -59,8 +59,9 @@ def checkout(request):
                 if customer.paid:
                     
                     checkout_user_info.save()
-                    # receiving_email = CheckoutUserInfo.user_email
-                    # print(receiving_email)
+                    receiving_email = CheckoutUserInfo.objects.order_by('order_date').last()
+                    reciver = receiving_email.user_email
+                    print(reciver)
 
                     user_order_set_price = CheckoutUserInfo.objects.order_by('order_date').last()
                     user_order_set_price.user_price_total = cart_payment_total
@@ -83,7 +84,7 @@ def checkout(request):
                     mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems or concerns please consult out contact page on our website."
                     
                     send_mail('Thank you for your order!', mail_message, settings.EMAIL_HOST_USER,
-                        ['tomagarratt@yahoo.co.uk'], fail_silently=False)
+                        ['reciver'], fail_silently=False)
 
                     messages.success(request, "You have successfully paid £" +  str(payment_amount) + "!")
                     request.session.flush()
