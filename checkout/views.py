@@ -59,7 +59,7 @@ def checkout(request):
                 if customer.paid:
                     
                     checkout_user_info.save()
-                    receiving_email = CheckoutUserInfo.user_email()
+                    receiving_email = CheckoutUserInfo.user_email
                     print(receiving_email)
 
                     user_order_set_price = CheckoutUserInfo.objects.order_by('order_date').last()
