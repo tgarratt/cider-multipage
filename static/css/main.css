@@ -27,12 +27,16 @@ form button {
     
 }
 
+.inline{
+    display: inline-block;
+}
+
 /*HOMEPAGE*/
 
 .homepage {
     background-image: url('../../static/img/miscellaneous/homepage-pinksky-bg-lg.jpg');
     background-repeat: no-repeat;
-    height: 100%;
+    height: 110%;
     width: 100%;
 } 
 
@@ -114,12 +118,12 @@ form button {
     background-image: linear-gradient(#D1CDF0, #8DAEE4);
     position: absolute;
     top: 40%;
-    left:29%;
+    left: 23.5%;
     margin-top: -50px;
     margin-left: -50px;
-    width: 48%;
+    width: 60%;
     text-align: center;
-    border-radius: 25px;
+    border-radius: 20px;
     display: inline-block;
 }
 
@@ -143,6 +147,22 @@ form button {
 
 .featured-browsemore{
     font-weight: 600;
+}
+
+.form-control{
+    border: 0px;
+    background-color: #f1f1f1;
+}
+
+.imput-cart-add {
+    width: 50%;
+}
+
+.imput-cart-add:hover {
+    width: 50%;
+    background-color: #717476;
+    color: #ffff;
+    transition: 0.2s;
 }
 
 /*NAV*/
@@ -222,6 +242,10 @@ form button {
 
 .product-text{
     text-align: center;
+}
+
+.product-outside-box{
+    margin-bottom: 2%;
 }
 
  .product-img-bottle{
@@ -371,9 +395,13 @@ form button {
 /*CART*/
 
 .table{
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50% !important;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70% !important;
+}
+
+td, th{
+    text-align: center;
 }
 
 .product-img-cart{
@@ -401,6 +429,11 @@ form button {
     margin: 10px;
 }
 
+.add-cart-qty select{
+    margin-left: 5px;
+    border-radius: 3px;
+}
+
 .add-cart-qty input {
     margin: auto;
 }
@@ -411,6 +444,32 @@ form button {
     text-align: center;
     font-size: 150%;
 }
+
+
+/*CHECKOUT*/
+
+.checkout-legend{
+    margin: 3% 0% 1% 15%;
+}
+
+.checkout-form-user-info{
+    margin: 0% 15% 0% 15%;
+}
+
+.checkout-form-user-info input{
+    display: inline-block;
+    width: 98%;
+} 
+
+.checkout-form-payment-info{
+    margin: 5% 15% 0% 15%;
+}
+
+.checkout-form-payment-info input{
+    display: block;
+    width: 100%;
+} 
+
 
 /*SIGN IN*/
 

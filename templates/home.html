@@ -89,7 +89,7 @@
                 <div class="col-md-4">
                     <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.product_img.url}}')"></div>
                     <div class="featured-text">
-                            <div>{{featured.product_title}}</div>
+                            <div><b>{{featured.product_title}}</b></div>
                             <div>
                                 <p>£{{featured.product_price}}</p>
                             </div>
@@ -97,7 +97,7 @@
                                 <form class="add-cart-qty" action="{% url 'cart_add' featured.id %}" method="post">
                                     {{ cart_product_form }}
                                     {% csrf_token %}
-                                    <input type="submit" value="Add to cart">
+                                    <input class="imput-cart-add form-control" type="submit" value="Add">
                                 </form>
                             </div>
                         </div>

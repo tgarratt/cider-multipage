@@ -27,96 +27,101 @@ Products
     <div>
         
         <div class="product-category">
+            <div class="product-outside-box">
 
-            {%for all_products in all_products%}
-                {% if all_products.product_type == "1" %}
+                {%for all_products in all_products%}
+                    {% if all_products.product_type == "1" %}
 
-                <div class="product">
-                    <div class="product-img-bottle" style="background-image: url('{{MEDIA_URL}}{{all_products.product_img.url}}')"></div>
-                    <div class="product-text">
-                        <div>{{all_products.product_title}}</div>
-                        <div>
-                            <p>£{{all_products.product_price}}<p>
-                            <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
-                                {{ cart_product_form }}
-                                {% csrf_token %}
-                                <input type="submit" value="Add to cart">
-                            </form>
-                        </div>
-                        <div>
-                            {%if user.is_superuser %}
-                            <a class="a-tag settings" href="{% url 'productpk_edit' all_products.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="a-tag settings" href="{% url 'productpk_delete' all_products.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                            {%endif%}
+                    <div class="product">
+                        <div class="product-img-bottle" style="background-image: url('{{MEDIA_URL}}{{all_products.product_img.url}}')"></div>
+                        <div class="product-text">
+                            <div><b>{{all_products.product_title}}</b></div>
+                            <div>
+                                <p>£{{all_products.product_price}}<p>
+                                <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
+                                    {{ cart_product_form }}
+                                    {% csrf_token %}
+                                    <input class="imput-cart-add form-control" type="submit" value="Add to cart">
+                                </form>
+                            </div>
+                            <div>
+                                {%if user.is_superuser %}
+                                <a class="a-tag settings" href="{% url 'productpk_edit' all_products.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a class="a-tag settings" href="{% url 'productpk_delete' all_products.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                {%endif%}
+                            </div>
                         </div>
                     </div>
-                </div>
-               {%endif%}
-            {%endfor%}
+                {%endif%}
+                {%endfor%}
+            </div>
 
         </div>
         
         <div class="product-category">
+            <div class="product-outside-box">
 
-            {%for all_products in all_products%}
-                {% if all_products.product_type == "2" %}
+                {%for all_products in all_products%}
+                    {% if all_products.product_type == "2" %}
 
-                <div class="product">
-                    <div class="product-img-crate"  style="background-image: url('{{MEDIA_URL}}{{all_products.product_img.url}}')"></div>
-                    <div class="product-text">
-                        <div>{{all_products.product_title}}</div>
-                        <div>
-                            <p>£{{all_products.product_price}}</p>
-                            <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
-                                {{ cart_product_form }}
-                                {% csrf_token %}
-                                <input type="submit" value="Add to cart">
-                            </form>
-                        
-                        </div>
-                        <div>
-                            {%if user.is_superuser %}
-                            <a class="a-tag settings" href="{% url 'productpk_edit' all_products.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="a-tag settings" href="{% url 'productpk_delete' all_products.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                            {%endif%}
+                    <div class="product">
+                        <div class="product-img-crate"  style="background-image: url('{{MEDIA_URL}}{{all_products.product_img.url}}')"></div>
+                        <div class="product-text">
+                            <div><b>{{all_products.product_title}}</b></div>
+                            <div>
+                                <p>£{{all_products.product_price}}</p>
+                                <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
+                                    {{ cart_product_form }}
+                                    {% csrf_token %}
+                                    <input class="imput-cart-add form-control" type="submit" value="Add to cart">
+                                </form>
+                            
+                            </div>
+                            <div>
+                                {%if user.is_superuser %}
+                                <a class="a-tag settings" href="{% url 'productpk_edit' all_products.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a class="a-tag settings" href="{% url 'productpk_delete' all_products.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                {%endif%}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {%endif%}
-            {%endfor%}
-
+                    {%endif%}
+                {%endfor%}
+            </div>
         </div>
 
         <div class="product-category">
+            <div class="product-outside-box">
 
-            {%for all_products in all_products%}
-                {% if all_products.product_type == "3" %}
+                {%for all_products in all_products%}
+                    {% if all_products.product_type == "3" %}
 
-                <div class="product">
-                    <div class="product-img-keg"  style="background-image: url('{{MEDIA_URL}}{{all_products.product_img.url}}')"></div>
-                    <div class="product-text">
-                        <div>{{all_products.product_title}}</div>
-                        <div>
-                            <p>£{{all_products.product_price}}</p>
-                            <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
-                                {{ cart_product_form }}
-                                {% csrf_token %}
-                                <input type="submit" value="Add to cart">
-                            </form>
-                        
-                        </div>
-                        <div>
-                            {%if user.is_superuser %}
-                            <a class="a-tag settings" href="{% url 'productpk_edit' all_products.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="a-tag settings" href="{% url 'productpk_delete' all_products.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                            {%endif%}
+                    <div class="product">
+                        <div class="product-img-keg"  style="background-image: url('{{MEDIA_URL}}{{all_products.product_img.url}}')"></div>
+                        <div class="product-text">
+                            <div><b>{{all_products.product_title}}</b></div>
+                            <div>
+                                <p>£{{all_products.product_price}}</p>
+                                <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
+                                    {{ cart_product_form }}
+                                    {% csrf_token %}
+                                    <input class="imput-cart-add form-control" type="submit" value="Add to cart">
+                                </form>
+                            
+                            </div>
+                            <div>
+                                {%if user.is_superuser %}
+                                <a class="a-tag settings" href="{% url 'productpk_edit' all_products.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                <a class="a-tag settings" href="{% url 'productpk_delete' all_products.id %}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                {%endif%}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {%endif%}
-            {%endfor%}
+                    {%endif%}
+                {%endfor%}
+            </div>
             
         </div>
     

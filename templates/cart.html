@@ -63,7 +63,7 @@ Cart
                         <div>
                             {%if cart.get_total_price <= 25 %}
                                 + £5.00 postage
-                            <div>Get free postage if you spend £{{ cart.price_until_free_post }}!</div>
+                            <div>Get free postage if you spend another £{{ cart.price_until_free_post }}!</div>
                             {%else%}
                             <div>You get free delivery</div>
                             {%endif%}
