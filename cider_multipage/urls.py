@@ -25,6 +25,7 @@ from admin_review.views import admin_review, infopk_delete
 from django.contrib.auth import views as auth_views
 
 app_name = "cider_multipage"
+handler404 = 'error.views.error_404'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

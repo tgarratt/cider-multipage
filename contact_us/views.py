@@ -3,7 +3,6 @@ from cart.cart import Cart
 
 
 def contact_us(request):
-    # returns homepage
 
     cart = Cart(request)
          
