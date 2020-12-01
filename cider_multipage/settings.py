@@ -41,6 +41,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     'natura-cider.herokuapp.com',
     'localhost',
+    '*',
 ]
 
 
@@ -161,7 +162,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 #FOR EDIT
