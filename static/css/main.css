@@ -52,7 +52,7 @@ form button {
 /*nav FOR HOMEPAGE*/
 
 .nav-natura-hp {
-    background-image: url('../../static/img/miscellaneous/Natura-logo.png');
+    background-image: url('https://res.cloudinary.com/dus4luncp/image/upload/v1606916790/Natura-logo_otcw2l.png');
     width: 8em;
     height: 8em;
     background-repeat: no-repeat;
@@ -173,7 +173,7 @@ form button {
 }
 
 .nav-natura {
-    background-image: url('../../static/img/miscellaneous/Natura-logo.png');
+    background-image: url('https://res.cloudinary.com/dus4luncp/image/upload/v1606916790/Natura-logo_otcw2l.png');
     width: 8em;
     height: 8em;
     background-repeat: no-repeat;
@@ -508,6 +508,20 @@ td, th{
     /* text-align: center; */
 }
 
+
+/*ERROR*/
+
+error-image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    position: static;
+    
+}
+
+
+
 /*FOOTER*/
 
 .footer {
@@ -564,5 +578,14 @@ td, th{
 
     .footer-icons-mobile {
         display: block;
+    }
+    desktop-only {
+         display: none !important;
+    }
+}
+
+@media(min-width: 993px) {
+    .mobile-only {
+        display: none !important;
     }
 }

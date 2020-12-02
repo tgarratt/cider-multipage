@@ -508,6 +508,20 @@ td, th{
     /* text-align: center; */
 }
 
+
+/*ERROR*/
+
+error-image{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    position: static;
+    
+}
+
+
+
 /*FOOTER*/
 
 .footer {
@@ -564,5 +578,14 @@ td, th{
 
     .footer-icons-mobile {
         display: block;
+    }
+    desktop-only {
+         display: none !important;
+    }
+}
+
+@media(min-width: 993px) {
+    .mobile-only {
+        display: none !important;
     }
 }
