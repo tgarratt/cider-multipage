@@ -94,11 +94,21 @@
                                 <p>£{{featured.product_price}}</p>
                             </div>
                             <div>
-                                <form class="add-cart-qty" action="{% url 'cart_add' featured.id %}" method="post">
-                                    {{ cart_product_form }}
-                                    {% csrf_token %}
+
+                                {%if user.is_superuser %}
+                                    <div>N/A in admin.</div>
+                                {%else%}
+                                    <form class="add-cart-qty" action="{% url 'cart_add' featured.id %}" method="post">
+                                        {{ cart_product_form }}
+                                        {% csrf_token %}
+                                        
+                                        
+                                            
+                                        
                                     <input class="imput-cart-add form-control" type="submit" value="Add">
                                 </form>
+                                {%endif%}
+                                
                             </div>
                         </div>
                 </div>

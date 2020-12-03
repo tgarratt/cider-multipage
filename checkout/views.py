@@ -81,7 +81,7 @@ def checkout(request):
 
                     
 
-                    mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems or concerns please consult out contact page on our website."
+                    mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems or concerns please consult our contact page on our website."
                     
                     send_mail('Thank you for your order!', mail_message, settings.EMAIL_HOST_USER,
                         [reciver], fail_silently=False)
