@@ -31,6 +31,10 @@ form button {
     display: inline-block;
 }
 
+li{
+    list-style: none;
+}
+
 /*HOMEPAGE*/
 
 .homepage {
@@ -103,6 +107,17 @@ form button {
     display: inline !important;
     padding-left: 3px;
     font-weight: 700;
+}
+
+.mob-nav-link {
+    color: #000;
+    padding-left: 15px;
+    margin-left: 10px;
+}
+
+.navbar-toggler-icon{
+    font-size: 150%;
+    padding: 5px;
 }
 
 /*CONTENT PAGE*/
@@ -291,13 +306,14 @@ form button {
 .product-form form input {
     margin: 3px;
     display: block;
-    width: 300px !important;
+    width: 40% !important;
 }
 
 .product-form form label {
     font-size: 1.2em;
     padding-top: 20px;
     text-decoration: underline;
+    width: 100%;
 }
 
 .prod-settings {
@@ -582,7 +598,62 @@ error-image{
     desktop-only {
          display: none !important;
     }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 75%;
+        height: 100%;
+    }
+
+    .navbar-collapse.collapsing {
+        left: -75%;
+        transition: height 0s ease;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        transition: left 300ms ease-in-out;
+    }
+
+    .navbar-toggler.collapsed ~ .navbar-collapse {
+        transition: left 500ms ease-in-out;
+    }
+
+    .nav-link-mob{
+        font-size: 2em;
+        padding: 5% 1% 2% 0% !important;
+        text-decoration: none;
+        position: relative;
+        color: #000;
+    }
+
+    .nav-mob-link{
+        padding-top: 10%;
+    }
+
+    #navbarCollapse{
+        margin-top: 2%;
+    }
+
+    .mob-nav-logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    .mob-nav-logo a{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .home-pg-title-mob{
+        padding-top: 20%;
+    }
 }
+
 
 @media(min-width: 993px) {
     .mobile-only {

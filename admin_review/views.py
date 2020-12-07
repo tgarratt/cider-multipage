@@ -9,6 +9,7 @@ def admin_review(request):
 
     all_checkoutuserinfo = CheckoutUserInfo.objects.all()
 
+
     return render(request, "../templates/admin_review.html",
         {"all_checkoutuserinfo": all_checkoutuserinfo})
 
