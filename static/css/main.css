@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    height: 100% !important;
+    height: 130% !important;
 }
 
 .a-tag {
@@ -549,6 +549,8 @@ error-image{
     background-color: #1F1F1F;
     color: #ffff;
     padding: 5px;
+    position: absolute;
+    z-index: -10;
 }
 
 .footer-text{
@@ -664,15 +666,14 @@ error-image{
         right: 20%;
         margin: auto;
         width: 75%;
-        height: 80%;
-        /* text-align: center; */
+        height: 530px;
         border-radius: 20px;
         display: inline-block;
         overflow-y: hidden;
         overflow-x: scroll;
         white-space: nowrap !important;
     }
-    .homepge-items{
+    .homepage-items{
         width: 825px;  
     }
 
