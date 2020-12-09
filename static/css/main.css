@@ -40,7 +40,7 @@ li{
 .homepage {
     background-image: url('../../static/img/miscellaneous/homepage-pinksky-bg-lg.jpg');
     background-repeat: no-repeat;
-    height: 110%;
+    height: 100%;
     width: 100%;
 } 
 
@@ -133,13 +133,18 @@ li{
     background-image: linear-gradient(#D1CDF0, #8DAEE4);
     position: absolute;
     top: 40%;
-    left: 23.5%;
+    left: 21%;
     margin-top: -50px;
     margin-left: -50px;
-    width: 60%;
+    width: 65%;
     text-align: center;
     border-radius: 20px;
-    display: inline-block;
+    display: inline;
+}
+
+.featured-product{
+    padding: 0% 2% 0% 2%;
+    display: inline;
 }
 
 .featured-img{
@@ -149,10 +154,9 @@ li{
     display: inline-block;
     background-size: contain;
     background-position: center;
-    padding: 100px;
+    padding: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
-    z-index: 10;
 }
 
 .featured-text {
@@ -651,6 +655,33 @@ error-image{
     }
     .home-pg-title-mob{
         padding-top: 20%;
+    }
+    .homepage-featured{
+        background-image: linear-gradient(#D1CDF0, #8DAEE4);
+        position: absolute;
+        top: 40%;
+        left: 12%;
+        right: 20%;
+        margin: auto;
+        width: 75%;
+        height: 80%;
+        /* text-align: center; */
+        border-radius: 20px;
+        display: inline-block;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap !important;
+    }
+    .homepge-items{
+        width: 825px;  
+    }
+
+    .featured-product{
+        padding: 0% 2% 0% 2%;
+        display: inline-block !important;
+        width: 275px;
+        height: 300px;
+        float: left;
     }
 }
 

@@ -91,14 +91,16 @@
                     </li>
                     {%else%}
                     <li class="nav-itemcart-nav nav-mob-link">
-                        <a class="nav-link-mob nav-link-hp" href="{%url 'cart_detail'%}">Cart (
+                        <a class="nav-link-mob nav-link-hp" href="{%url 'cart_detail'%}">Cart 
                             <div class="cart-nav-n">
                             {% if n == 0 %}
                             {% else %}
-                            ({{n}})
+                            (
+                            {{n}}
+                            )
                             {%endif%}
                             </div>
-                        )</a>
+                        </a>
                     </li>
                     {%endif%}
                 </ul>
@@ -124,9 +126,9 @@
 
         <div class="homepage-featured">
 
-            <div class="row">
+            <div class="row homepge-items">
             {%for featured in featured%}
-                <div class="col-md-4">
+                <div class="col-lg-4 featured-product">
                     <div class="featured-img" style="background-image: url('{{MEDIA_URL}}{{featured.product_img.url}}')"></div>
                     <div class="featured-text">
                             <div><b>{{featured.product_title}}</b></div>
