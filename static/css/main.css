@@ -1,6 +1,7 @@
 body {
     font-family: 'Lato', sans-serif;
     height: 130% !important;
+    width: 100%;
 }
 
 .a-tag {
@@ -680,7 +681,6 @@ error-image{
         display: inline-block !important;
         width: 275px;
         height: 300px;
-        float: left;
     }
 
     .contact{
@@ -697,6 +697,16 @@ error-image{
         font-size: 80%;
         text-align: center;
         margin: auto;
+    }
+    .product {
+        width: 220px;
+        height: 200px;
+    }
+    .product-form{
+        padding-left: 10%;
+    }
+    .product-form form input{
+        width: 90% !important;
     }
 }
 
