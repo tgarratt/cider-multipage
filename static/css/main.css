@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    height: 130% !important;
+    height: 120% !important;
     width: 100%;
 }
 
@@ -491,6 +491,9 @@ td, th{
     width: 100%;
 } 
 
+.checkout-form-payment-info select{
+    margin: 2% 0% 0% 3%;
+} 
 
 /*SIGN IN*/
 
@@ -597,10 +600,16 @@ error-image{
 
 @media(max-width: 992px) {
 
+    body{
+        height: 150% !important;
+    }
     .footer-icons-mobile {
         display: block;
     }
-    desktop-only {
+    .footer {
+        border-top: 50% !important;
+    }
+    .desktop-only {
          display: none !important;
     }
 
@@ -655,12 +664,12 @@ error-image{
         max-height: 100%;
     }
     .home-pg-title-mob{
-        padding-top: 20%;
+        padding-top: 22%;
     }
     .homepage-featured{
         background-image: linear-gradient(#D1CDF0, #8DAEE4);
         position: absolute;
-        top: 40%;
+        top: 46%;
         left: 12%;
         right: 20%;
         margin: auto;
@@ -707,6 +716,10 @@ error-image{
     }
     .product-form form input{
         width: 90% !important;
+    }
+    .featured-browsemore{
+        margin-top: 15px;
+        text-align: center;
     }
 }
 

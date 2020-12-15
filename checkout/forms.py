@@ -15,7 +15,7 @@ class payment_form(forms.Form):
         max_length=19, label='Credit card number', required=False)
     cvv = forms.CharField(max_length=3, label='Security code', required=False)
     expiry_month = forms.ChoiceField(
-        label='Month', choices=MONTH_CHOICES, required=False)
+        label='Expiry Month', choices=MONTH_CHOICES, required=False)
     expiry_year = forms.ChoiceField(
-        label='Year', choices=YEAR_CHOICES, required=False)
+        label='Expiry Year', choices=YEAR_CHOICES, required=False)
     stripe_id = forms.CharField(widget=forms.HiddenInput)
