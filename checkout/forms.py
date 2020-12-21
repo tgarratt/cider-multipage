@@ -19,3 +19,5 @@ class payment_form(forms.Form):
     expiry_year = forms.ChoiceField(
         label='Expiry Year', choices=YEAR_CHOICES, required=False)
     stripe_id = forms.CharField(widget=forms.HiddenInput)
+
+    # widget=forms.TextInput(attrs={'class': 'EXP-checkout'})

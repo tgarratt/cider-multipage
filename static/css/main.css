@@ -174,11 +174,11 @@ li{
     background-color: #f1f1f1;
 }
 
-.imput-cart-add {
+.input-cart-add {
     width: 50%;
 }
 
-.imput-cart-add:hover {
+.input-cart-add:hover {
     width: 50%;
     background-color: #717476;
     color: #ffff;
@@ -442,7 +442,18 @@ td, th{
 }
 
 .cart-single-button{
-    padding: 0px 15px 0px 15px;
+    padding: 5px 8px 5px 8px;
+    margin-right: 10px;
+    background-color: #f1f1f1;
+    color: #495057;
+    border-radius: 3px;
+}
+
+.cart-single-button:hover {
+    color: #f1f1f1;
+    background-color: #495057;
+    transition-duration: 0.2s;
+    text-decoration: none;    
 }
 
 .add-cart-qty {
@@ -488,6 +499,10 @@ td, th{
     margin: 0% 15% 0% 15%;
 }
 
+.checkout-form-user-info label{
+    margin-top: 2%;
+}
+
 .checkout-form-user-info input{
     display: inline-block;
     width: 98%;
@@ -503,8 +518,12 @@ td, th{
 } 
 
 .checkout-form-payment-info select{
-    margin: 2% 0% 0% 3%;
-} 
+    margin: 1% 5% 0% 2%;
+}
+
+.checkout-form-payment-info label{
+    margin-top: 2%;
+}
 
 /*SIGN IN*/
 
@@ -780,4 +799,20 @@ error-image{
         margin-top: 10%;
         padding-left: 15px;
     }
+    .checkout-form-payment-info label{
+        font-size: 60%;
+        margin-left: 1%;
+        margin-right: 0%;
+    }
+        .checkout-form-payment-info select{
+        font-size: 60%;
+        margin: 1% 3% 0% 1%;
+    }
+    .checkout-form-user-info label{
+        font-size: 60%;
+    }
+    .footer-list-li {
+    font-size: 2em;
+    margin: 0.2em;
+}
 }
