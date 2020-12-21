@@ -525,6 +525,20 @@ td, th{
     margin-top: 2%;
 }
 
+.checkout-btn{
+    margin-left: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #f1f1f1;
+    color: #495057;
+
+}
+
+.checkout-btn:hover{
+    color: #f1f1f1;
+    background-color: #495057;
+}
+
 /*SIGN IN*/
 
 .access-form {
