@@ -598,7 +598,7 @@ error-image{
     color: #ffff;
     padding: 5px;
     position: absolute;
-    z-index: -10;
+    z-index: 1;
 }
 
 .footer-text{
