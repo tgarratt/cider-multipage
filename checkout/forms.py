@@ -12,12 +12,10 @@ class payment_form(forms.Form):
     YEAR_CHOICES = [(i, i) for i in range(current_year, 2041)]
 
     credit_card_number = forms.CharField(
-        max_length=19, label='Credit card number', required=False)
-    cvv = forms.CharField(max_length=3, label='Security code', required=False)
+        initial=4242424242424242, max_length=19, label='Credit card number', required=False, disabled="disabled")
+    cvv = forms.CharField(initial=222, max_length=3, label='Security code', required=False, disabled="disabled")
     expiry_month = forms.ChoiceField(
         label='Expiry Month', choices=MONTH_CHOICES, required=False)
     expiry_year = forms.ChoiceField(
         label='Expiry Year', choices=YEAR_CHOICES, required=False)
     stripe_id = forms.CharField(widget=forms.HiddenInput)
-
-    # widget=forms.TextInput(attrs={'class': 'EXP-checkout'})
