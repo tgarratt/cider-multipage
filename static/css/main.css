@@ -542,7 +542,7 @@ td, th{
 /*SIGN IN*/
 
 .access-form {
-    padding-left: 0px;
+    /* padding-left: 0px; */
     text-align: center;
 }
 
@@ -556,6 +556,12 @@ td, th{
     display: block;
     width: 300px !important;
     outline: 1px solid black;
+}
+
+.message-sign-in{
+    text-align: center;
+    font-size: 1.3em;
+    color: #000;
 }
 
 /*ADMIN REVIEW*/

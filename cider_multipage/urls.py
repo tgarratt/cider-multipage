@@ -26,6 +26,7 @@ from django.contrib.auth import views as auth_views
 
 app_name = "cider_multipage"
 handler404 = 'error.views.error_404'
+handler500 = 'error.views.error_500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),

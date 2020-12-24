@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+
+{%block title%}
+Error
+{%endblock%}
+
+{%block heading%}
+Error 500
+{%endblock%}
+
+{%block content%}
+
+    <div class="cart-empty">
+            <div>Oops! There seems to be a problem :(</div>
+            <div>You seem to be lost, find your way back to the homepage <a href="{%url 'home'%}">Here!</a></div>
+    </div>
+
+{%endblock%}

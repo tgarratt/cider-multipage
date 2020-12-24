@@ -13,7 +13,7 @@ class payment_form(forms.Form):
 
     credit_card_number = forms.CharField(
         initial=4242424242424242, max_length=19, label='Credit card number', required=False, disabled="disabled")
-    cvv = forms.CharField(initial=222, max_length=3, label='Security code', required=False, disabled="disabled")
+    cvv = forms.CharField(initial=222, max_length=3, min_length=3, label='Security code', required=False, disabled="disabled")
     expiry_month = forms.ChoiceField(
         label='Expiry Month', choices=MONTH_CHOICES, required=False)
     expiry_year = forms.ChoiceField(

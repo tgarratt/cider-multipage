@@ -13,5 +13,20 @@ def error_404(request, exception):
         n = n + q
     print(n)
 
-    return render(request, "../templates/error.html",
+    return render(request, "../templates/error404.html",
+        {'n': n})
+
+
+def error_500(request):
+    # returns Errorpage
+
+    cart = Cart(request)
+         
+    n = 0
+    for item in cart:
+        q = item['quantity']
+        n = n + q
+    print(n)
+
+    return render(request, "../templates/error500.html",
         {'n': n})

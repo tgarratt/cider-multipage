@@ -43,8 +43,8 @@ def sign_in(request):
                 messages.success(request, "Login successful!")
                 return redirect(reverse('home'))
             else:
-                sign_in_form.add_error(
-                    None, "Your username or password is incorrect!")
+                messages.error(
+                    request, "Your username or password is incorrect!")
     else:
         sign_in_form = access()
     

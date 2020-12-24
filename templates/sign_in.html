@@ -9,6 +9,17 @@ Admin access
 {%endblock%}
 
 {%block content%}
+
+<div>
+    {%if messages%}
+    <div class="message-sign-in">
+        {%for message in messages%}
+            {{message}}
+        {%endfor%}
+    </div>
+    {%endif%}
+</div>
+
 <div class="access-form">
     <form class="form" method="POST">
         {% csrf_token %}
@@ -18,16 +29,5 @@ Admin access
         <button type="submit" class="btn btn-light btn-sm">Sign in</button>
 
     </form>
-
-    <div>
-        {%if messages%}
-        <div class="message-home">
-            {%for message in messages%}
-                {{message}}
-            {%endfor%}
-        </div>
-        {%endif%}
-    </div>
-
 </div>
 {%endblock%}

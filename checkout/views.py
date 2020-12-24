@@ -14,6 +14,7 @@ import stripe
 stripe.api_key = settings.STRIPE_SECRET
 
 
+
 def checkout(request):
 
     cart = Cart(request)
@@ -23,6 +24,10 @@ def checkout(request):
         q = item['quantity']
         n = n + q
     print(n)
+
+    if n==0:
+        return redirect(reverse("cart_detail"))
+
 
 
     cart_payment_total = cart.get_total_price()
@@ -81,10 +86,10 @@ def checkout(request):
 
                     
 
-                    mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems or concerns please consult our contact page on our website."
+                    # mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems or concerns please consult our contact page on our website."
                     
-                    send_mail('Thank you for your order!', mail_message, settings.EMAIL_HOST_USER,
-                        [reciver], fail_silently=False)
+                    # send_mail('Thank you for your order!', mail_message, settings.EMAIL_HOST_USER,
+                    #     [reciver], fail_silently=False)
 
                     messages.success(request, "You have successfully paid £" +  str(payment_amount) + "!")
                     request.session.flush()
@@ -95,7 +100,7 @@ def checkout(request):
                     messages.error(request, "Unable to take payment!")
 
             except stripe.error.CardError:
-                messages.error(request, "Your card was declined!")
+                messages.error(request, "Unable to take payment!")
 
         else:
             print(payment.errors)
@@ -104,6 +109,8 @@ def checkout(request):
 
     else:
         payment = payment_form()
+        # messages.info(request, "Unable to take payment!")
+        # return redirect(reverse("checkout"))
     
     
     return render(
