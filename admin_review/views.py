@@ -9,9 +9,13 @@ def admin_review(request):
 
     all_checkoutuserinfo = CheckoutUserInfo.objects.all()
 
+    num_orders = 0
+    for item in all_checkoutuserinfo:
+        num_orders += 1
+    print(num_orders)
 
     return render(request, "../templates/admin_review.html",
-        {"all_checkoutuserinfo": all_checkoutuserinfo})
+        {"all_checkoutuserinfo": all_checkoutuserinfo, 'num_orders': num_orders})
 
 def infopk_delete(request, pk=None):
     # deletes selected product

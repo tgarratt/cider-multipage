@@ -45,7 +45,9 @@ Products
                                     <form class="add-cart-qty" action="{% url 'cart_add' all_products.id %}" method="post">
                                         {{ cart_product_form }}
                                         {% csrf_token %}
+                                        
                                         <input class="input-cart-add form-control" type="submit" value="Add to cart">
+                                       
                                     </form>
                                 {%endif%}
                                 

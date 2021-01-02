@@ -12,14 +12,20 @@ def products(request):
     cart = Cart(request)
 
     n = 0
+
     for item in cart:
         q = item['quantity']
         n = n + q
+        if q == 20:
+            messages.error(
+                    request, "Maximum single item quantity of 20 reached!")
+
     print(n)
 
     all_products = add_product.objects.all()
-    
     cart_product_form = CartAddProductForm()
+
+
 
     return render(request, "../templates/products.html", 
     {"all_products": all_products,
@@ -42,7 +48,7 @@ def get_add_product_form(request):
         print(request.POST)
         product_form = add_product_form(request.POST, request.FILES)
         if product_form.is_valid():
-            product_form.save()
+
             return redirect(reverse('products'))
     else:
         product_form = add_product_form()

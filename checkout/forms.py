@@ -7,9 +7,10 @@ class payment_form(forms.Form):
 
     now = timezone.now()
     current_year = now.year
+    final_year = current_year + 21
 
     MONTH_CHOICES = [(i, i) for i in range(1, 13)]
-    YEAR_CHOICES = [(i, i) for i in range(current_year, 2041)]
+    YEAR_CHOICES = [(i, i) for i in range(current_year, final_year)]
 
     credit_card_number = forms.CharField(
         initial=4242424242424242, max_length=19, label='Credit card number', required=False, disabled="disabled")

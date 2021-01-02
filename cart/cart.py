@@ -30,7 +30,12 @@ class Cart(object):
             self.cart[product_id]['quantity'] = quantity
         else:
             self.cart[product_id]['quantity'] += quantity
-        self.save()
+
+        if self.cart[product_id]['quantity'] >= 21:
+            self.cart[product_id]['quantity'] = 20
+            self.save()
+        else:
+            self.save()
 
     def save(self):
         # update the session cart
