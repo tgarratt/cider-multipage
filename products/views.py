@@ -12,15 +12,17 @@ def products(request):
     cart = Cart(request)
 
     n = 0
+    q = 0
 
     for item in cart:
         q = item['quantity']
         n = n + q
-        if q == 20:
-            messages.error(
-                    request, "Maximum single item quantity of 20 reached!")
 
     print(n)
+
+    if q == 20:
+        messages.info(
+                request, "Maximum single item quantity of 20 reached!")
 
     all_products = add_product.objects.all()
     cart_product_form = CartAddProductForm()

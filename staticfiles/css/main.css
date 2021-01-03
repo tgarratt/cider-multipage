@@ -566,6 +566,10 @@ td, th{
 
 /*ADMIN REVIEW*/
 
+.review_page{
+    height: 100% !important;
+}
+
 .order {
     margin: 1%;
     border: rgb(169, 164, 199) 3px groove;
@@ -576,6 +580,7 @@ td, th{
 
 .order-list {
     width: 100%;
+    /* height: 100%; */
     margin: auto;
     margin-left: 10%;
     margin-right: 9%;
