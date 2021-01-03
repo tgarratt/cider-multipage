@@ -39,7 +39,6 @@ def sign_in(request):
                 username=request.POST['username'],
                 password=request.POST['password'])
             if user:
-                request.session.flush()
                 auth.login(user=user, request=request)
                 messages.success(request, "Login successful!")
                 return redirect(reverse('home'))
