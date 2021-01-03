@@ -50,7 +50,7 @@ def get_add_product_form(request):
         print(request.POST)
         product_form = add_product_form(request.POST, request.FILES)
         if product_form.is_valid():
-
+            product_form.save()
             return redirect(reverse('products'))
     else:
         product_form = add_product_form()
