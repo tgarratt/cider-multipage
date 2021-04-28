@@ -12,6 +12,7 @@ def error_404(request, exception):
         q = item['quantity']
         n = n + q
     print(n)
+    print("^ cart items")
 
     return render(request, "../templates/error404.html",
         {'n': n})

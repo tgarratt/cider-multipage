@@ -17,8 +17,8 @@ def products(request):
     for item in cart:
         q = item['quantity']
         n = n + q
-
     print(n)
+    print("^ cart items")
 
     if q == 20:
         messages.info(

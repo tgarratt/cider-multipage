@@ -24,6 +24,7 @@ def checkout(request):
         q = item['quantity']
         n = n + q
     print(n)
+    print("^ cart items")
 
     if n==0:
         return redirect(reverse("cart_detail"))
@@ -32,6 +33,7 @@ def checkout(request):
 
     cart_payment_total = cart.get_total_price()
     print(cart_payment_total)
+    print("^ cart payment total")
 
     if request.method == "POST":
         
@@ -67,6 +69,7 @@ def checkout(request):
                     receiving_email = CheckoutUserInfo.objects.order_by('order_date').last()
                     reciver = receiving_email.user_email
                     print(reciver)
+                    print("^ customer email")
 
                     user_order_set_price = CheckoutUserInfo.objects.order_by('order_date').last()
                     user_order_set_price.user_price_total = cart_payment_total
@@ -84,10 +87,10 @@ def checkout(request):
                     user_order_set_price.save()
 
 
-                    mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems or concerns please consult our contact page on our website."
+                    # mail_message = "Thanks for choosing Natura, your order of " + cartsaved + " will be with you within 7 days. For any problems or concerns please consult our contact page on our website."
                     
-                    send_mail('Thank you for your order!', mail_message, settings.EMAIL_HOST_USER,
-                        [reciver], fail_silently=False)
+                    # send_mail('Thank you for your order!', mail_message, settings.EMAIL_HOST_USER,
+                    #     [reciver], fail_silently=False)
 
                     messages.success(request, "You have successfully paid £" +  str(payment_amount) + "!")
                     request.session.flush()

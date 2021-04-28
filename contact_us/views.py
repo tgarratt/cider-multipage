@@ -11,6 +11,7 @@ def contact_us(request):
         q = item['quantity']
         n = n + q
     print(n)
+    print("^ cart items")
 
     return render(request, "../templates/contact_us.html",
         {'n': n})

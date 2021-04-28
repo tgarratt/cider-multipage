@@ -41,6 +41,7 @@ def cart_detail(request):
         q = item['quantity']
         n = n + q
     print(n)
+    print("^ cart items")
 
     i = 0
     for item in cart:

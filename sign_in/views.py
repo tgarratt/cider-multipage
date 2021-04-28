@@ -28,6 +28,7 @@ def sign_in(request):
         q = item['quantity']
         n = n + q
     print(n)
+    print("^ cart items")
 
     if request.user.is_authenticated:
         return redirect(reverse('home'))
